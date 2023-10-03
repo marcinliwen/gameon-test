@@ -1,0 +1,49 @@
+<section class="relative getCursorPosition left-img home-hero">
+  <div class="swiper home-swiper h-full relative !z-20">
+    <div class="swiper-wrapper h-full">
+      {
+        [1, 2, 3].map((item) => {
+          return (
+            <div class="swiper-slide relative md:mt-0 h-full ">
+              <div class=" relative  z-20 h-full  home-hero-gradient">
+                <div class="container wrapper flex items-center h-full relative z-30 ">
+                  <div class="lg:max-w-[620px] lg:pr-0 lg:mt-[90px] h-full py-[100px] flex flex-col md:justify-center">
+                    <h1 class="text-white mb-4">JOIN THE NEXT KITE CLINIC!</h1>
+                    <p class="text-xl text-white font-normal flex items-center gap-8">
+                      <span>Sardinian July 2023</span>
+                      <span class="h-[1px] w-[90px] md:w-[107px] bg-white" />
+                    </p>
+                    <div class="mt-auto md:mt-[232px] lg:mt-[72px] grid md:flex gap-4 ">
+                      <a class="btn btn-text secondary full">Join now!</a>
+                      <a class="btn btn-text secondary outlined">
+                        Watch me first
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../public/assets/images/home-hero.png"
+                class="w-full h-full  top-0 left-0 absolute object-cover inset-0 z-10 "
+              />
+             
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="container wrapper absolute inset-0 h-full w-full">
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- <video
+          autoplay="true"
+          playsinline=""
+          loop=""
+          controlslist="nodownload"
+          poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg" src="https://c.stocksy.com/a/9bfI00/y0/4449811.mp4"
+          class="w-full h-full absolute top-0 left-0 object-cover z-10 md:hidden opacity-60 md:opacity-100"
+          muted=""
+        /> -->
+</section>

@@ -1,0 +1,86 @@
+
+    .home-swiper .swiper-pagination {
+        width: 120px;
+        right: 0;
+        color: #fff;
+    }
+
+    .home-swiper .swiper-pagination-bullet {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: transparent;
+        opacity: 1;
+    }
+
+    .home-swiper .swiper-pagination-bullet .line {
+        height: 1px;
+        width: 48px;
+        background: #fff;
+        display: block;
+    }
+
+    .home-swiper .swiper-pagination-bullet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .home-swiper .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .home-swiper .swiper-pagination-bullet .counter {
+        margin-right: 12px;
+    }
+
+    .home-swiper .swiper-pagination-bullet svg {
+        display: block;
+        margin-right: 16px;
+
+    }
+
+    .home-swiper .swiper-pagination-bullet svg path {
+        fill: transparent;
+        stroke: #fff;
+    }
+
+    .home-swiper .swiper-pagination-bullet .counter {
+        opacity: 0;
+    }
+
+    .home-swiper .swiper-pagination-bullet .line {
+        display: none;
+        opacity: 0;
+    }
+
+    .home-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active .counter {
+        opacity: 1;
+    }
+
+    .home-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active .line {
+        opacity: 1;
+    }
+
+    .home-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active svg path {
+        fill: #fff;
+        stroke: transparent;
+    }
+    .home-swiper.swiper-horizontal>.swiper-pagination-bullets, .home-swiper .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        right: 0;
+        left: auto;
+        bottom: auto;
+        top: 50%;
+        transform: translate3d(0px,-50%,0);
+    }
+    
+    .home-swiper.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .home-swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+    }
+    @media(min-width: 768px){
+        .home-swiper .swiper-pagination-bullet .line{
+            display: block
+        }
+    }
