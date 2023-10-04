@@ -10,17 +10,17 @@
     align-items: center;
     margin-top: 64px;
   }
-  .swiper-pagination {
+  .custom .swiper-pagination  {
     position: static;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
+  .custom .swiper-button-next,
+  .custom .swiper-button-prev {
     position: static;
     width: 32px;
     height: 32px;
     margin: 0px;
   }
-  .swiper-pagination{
+  .custom .swiper-pagination{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='11' viewBox='0 0 27 11' fill='none'%3E%3Cpath d='M20.0595 0.798717C20.0661 1.14154 19.9997 1.48183 19.8649 1.79548C19.7302 2.10914 19.5303 2.38873 19.2795 2.61467C18.7469 3.107 18.05 3.36885 17.3342 3.34595C16.7142 3.32056 16.1054 3.16883 15.5432 2.89914C14.8856 2.61357 14.2453 2.28757 13.6258 1.92311C12.8916 1.51199 12.1158 1.18462 11.3124 0.94707C10.3647 0.649165 9.37905 0.498474 8.38805 0.500012C5.56752 0.500012 3.46636 1.38981 2.08462 3.16913C0.623295 5.20614 -0.108507 7.69961 0.013027 10.2277H6.91144C6.90236 9.88378 6.96631 9.54203 7.0988 9.22614C7.23129 8.91026 7.42913 8.62797 7.67859 8.39871C8.22782 7.90603 8.94043 7.6494 9.66862 7.68242C10.4682 7.73424 11.2453 7.97569 11.9392 8.38747C12.8294 8.85737 13.847 9.32687 14.9919 9.79608C16.1435 10.267 17.3724 10.506 18.6118 10.4999C21.4323 10.4999 23.5335 9.61503 24.9152 7.84526C26.3772 5.81364 27.1092 3.32401 26.9868 0.799965L20.0595 0.798717Z' fill='%233D8F94'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: left center;
@@ -121,7 +121,7 @@
     }
 
     @media(min-width: 768px){
-        .reviews-swiper .swiper-wrapper{
+        /* .reviews-swiper .swiper-wrapper{
             align-items: center;
         }
         .swiper-slide.swiper-slide-active>div{
@@ -147,5 +147,5 @@
         .swiper-slide.swiper-slide-active .lines-height{
             overflow: visible;
             -webkit-line-clamp: 100;
-        }
+        } */
     }

@@ -47,10 +47,20 @@ window.onload = () => {
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
-    slidesPerView: 3,
+    //slidesPerView: 3,
     spaceBetween: 16,
     centeredSlides: true,
     loop: true,
+    effect: "coverflow",
+    slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 50,
+        modifier: 1,
+        scale: 0.9,
+        slideShadows: false,
+      },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
