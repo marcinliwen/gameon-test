@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HomeHero from '../components/HomeHero.astro';
-import Reviews from '../components/Reviews.astro';
-import FollowUs from '../components/FollowUs.astro'
+import Sponsors from '../components/Sponsors.astro';
+import FollowUs from '../components/FollowUs.astro';
+import ReviewsSlider from '../components/ReviewsSlider.astro';
 ---
  
 <Layout title="Welcome to Astro." isHome={true}>
 	<HomeHero textdark={false}/>
+  <ReviewsSlider />
   <FollowUs />
-  <Reviews />
+  <Sponsors />
 </Layout>
 
 <link
