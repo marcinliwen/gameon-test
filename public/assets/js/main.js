@@ -20,7 +20,7 @@ window.onload = () => {
    */
   const homeSwiper = new Swiper(".home-swiper", {
     slidesPerView: 1,
-
+    parallax:true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -37,13 +37,13 @@ window.onload = () => {
     },
     breakpoints: {
       760: {
-        direction: "vertical",
+        //direction: "vertical",
       },
     },
     speed: 1000,
-    /* autoplay: {
+    autoplay: {
       delay: 4000,
-    }, */
+    },
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
@@ -59,6 +59,94 @@ window.onload = () => {
         depth: 50,
         modifier: 1,
         scale: 0.9,
+        slideShadows: false,
+      },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return (
+          addZerotoDigit(number) +
+          "."
+        );
+      },
+      formatFractionTotal: function (number) {
+        return addZerotoDigit(number);
+      },
+    },
+    breakpoints: {
+      760: {
+        slidesPerView: 2,
+      },
+      1024: { slidesPerView: 3},
+    },
+    speed: 1000,
+    /* autoplay: {
+      delay: 4000,
+    }, */
+  });
+  const coursesSwiper = new Swiper(".courses-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    centeredSlides: true,
+    loop: true,
+    effect: "coverflow",
+    slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        scale:0.9,
+        modifier: 1,
+        slideShadows: false,
+      },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return (
+          addZerotoDigit(number) +
+          "."
+        );
+      },
+      formatFractionTotal: function (number) {
+        return addZerotoDigit(number);
+      },
+    },
+    breakpoints: {
+      760: {
+        slidesPerView: 2,
+      },
+      1024: { slidesPerView: 3},
+    },
+    speed: 1000,
+    /* autoplay: {
+      delay: 4000,
+    }, */
+  });
+  const classesSwiper = new Swiper(".classes-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    centeredSlides: true,
+    loop: true,
+    effect: "coverflow",
+    slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        scale:0.9,
+        modifier: 1,
         slideShadows: false,
       },
     navigation: {

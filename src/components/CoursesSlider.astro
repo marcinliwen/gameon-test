@@ -1,0 +1,73 @@
+---
+import ProductCard from "./ProductCard.astro";
+
+---
+
+
+<section class="py-16 bg-white">
+    <div class="container wrapper">
+      <div class="text-center text-black mb-12">
+        <h2 class="h1 uppercase mb-4">ONLINE COURSES</h2>
+        <p class="">
+            Yorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="swiper courses-swiper">
+        <div class="swiper-wrapper">
+          {
+            [1, 2, 3,4, 5, 6].map((item) => {
+              return <ProductCard item={item} bg="bg-beige-400/50"/>;
+            })
+          }
+        </div>
+       <div class="slider-navigation custom">
+        <div class="swiper-button-prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_280_1977)">
+              <path
+                d="M18.4058 0.502197L5.83284 11.6282C5.7798 11.6751 5.73733 11.7328 5.70825 11.7973C5.67916 11.8619 5.66412 11.9319 5.66412 12.0027C5.66412 12.0735 5.67916 12.1435 5.70825 12.2081C5.73733 12.2726 5.7798 12.3303 5.83284 12.3772L18.4058 23.5022"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_280_1977">
+                <rect width="24" height="24" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_280_1986)">
+              <path
+                d="M5.66411 23.5022L18.2371 12.3762C18.2901 12.3293 18.3326 12.2716 18.3617 12.2071C18.3908 12.1425 18.4058 12.0725 18.4058 12.0017C18.4058 11.9309 18.3908 11.8609 18.3617 11.7963C18.3326 11.7318 18.2901 11.6741 18.2371 11.6272L5.66411 0.502197"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_280_1986">
+                <rect width="24" height="24" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

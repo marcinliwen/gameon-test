@@ -4,13 +4,22 @@ import HomeHero from '../components/HomeHero.astro';
 import Sponsors from '../components/Sponsors.astro';
 import FollowUs from '../components/FollowUs.astro';
 import ReviewsSlider from '../components/ReviewsSlider.astro';
+import CoursesSlider from '../components/CoursesSlider.astro';
+import ClassesSlider from '../components/ClassesSlider.astro';
+import Subscribe from '../components/Subscribe.astro';
+import AboutUs from '../components/AboutUs.astro';
 ---
  
 <Layout title="Welcome to Astro." isHome={true}>
 	<HomeHero textdark={false}/>
+  <AboutUs />
+  
   <ReviewsSlider />
   <FollowUs />
   <Sponsors />
+  <ClassesSlider />
+  <CoursesSlider />
+  <Subscribe />
 </Layout>
 
 <link
