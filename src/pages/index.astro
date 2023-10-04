@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HomeHero from '../components/HomeHero.astro';
+import Reviews from '../components/Reviews.astro';
+import FollowUs from '../components/FollowUs.astro'
 ---
  
 <Layout title="Welcome to Astro." isHome={true}>
 	<HomeHero textdark={false}/>
+  <FollowUs />
+  <Reviews />
 </Layout>
 
 <link
