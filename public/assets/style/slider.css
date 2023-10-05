@@ -149,3 +149,61 @@
             -webkit-line-clamp: 100;
         } */
     }
+    .tabs-content .swiper-container {
+        width: 100%;
+        height: 300px;
+      }
+      .tabs-content .swiper-slide {
+      }
+      .tabs-buttons {
+        height: auto;
+        box-shadow: inset 0 -1px #373737;
+        max-width: 967px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .tabs-buttons .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      .tabs-buttons .swiper-slide {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        cursor: pointer;    
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        transition: all .3s ease;
+    }
+    .tabs-buttons .swiper-slide  svg {
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .tabs-buttons .title{
+        font-size: 22px;
+font-style: normal;
+font-weight: 300;
+line-height: 140%;
+transition: all .3s ease;
+    }
+    .tabs-buttons .number{
+        font-size: 22px;
+font-style: normal;
+line-height: normal;
+width: 34px;
+transition: all .3s ease;
+    }
+    .tabs-buttons .active-tab {
+        opacity: 1;
+        background-color: #ABCFD1;
+        
+      }
+      .tabs-buttons .active-tab .number{
+        font-weight: 700;
+      }
+      .tabs-buttons .active-tab svg {
+        opacity: 1;
+      }
+

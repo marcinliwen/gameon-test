@@ -8,12 +8,13 @@ import CoursesSlider from '../components/CoursesSlider.astro';
 import ClassesSlider from '../components/ClassesSlider.astro';
 import Subscribe from '../components/Subscribe.astro';
 import AboutUs from '../components/AboutUs.astro';
+import OfferTab from '../components/OfferTab.astro';
 ---
  
 <Layout title="Welcome to Astro." isHome={true}>
 	<HomeHero textdark={false}/>
+  <OfferTab />
   <AboutUs />
-  
   <ReviewsSlider />
   <FollowUs />
   <Sponsors />

@@ -178,7 +178,44 @@ window.onload = () => {
       delay: 4000,
     }, */
   });
+  const tabs = document.querySelector('.tabs-buttons .swiper-wrapper');
+  const tabContent = new Swiper('.tabs-content', {
+    onSlideChangeStart: function(swiper, event) {
+      tabs.children[swiper.previousIndex].classList.remove('active');
+      tabs.children[swiper.activeIndex].classList.add('active');
+    }
+  });
 
+  const tabsNav = document.querySelectorAll('.tab-btn');
+  if(tabsNav.length > 0){
+    tabsNav.forEach((tab)=>{
+      tab.addEventListener('click',(e, index)=>{
+      e.stopPropagation();
+      console.log(e,' ', index)
+    })})
+  }
+  const tabButtons = new Swiper('.tabs-buttons', {
+    slidesPerView: 'auto',
+    reeMode: true,
+    // scrollbar: '.swiper-scrollbar',
+    mousewheelControl: true,
+    on:{
+      click: function(swiper, event) {
+        event.stopPropagation()
+        console.log('tap', swiper.clickedIndex)
+        console.log('target', event)
+        if ( event.target.classList.contains('swiper-slide') && !event.target.classList.contains('active-tab') ) {
+          console.log('event go')
+          event.target.parentElement.querySelector('.active-tab').classList.remove('active-tab');
+          event.target.classList.add('active-tab');
+          tabContent.slideTo(swiper.clickedIndex);
+        }
+      }
+    }
+    
+  });
+  
+  
   /**
    * sticky header
    */
