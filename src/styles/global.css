@@ -218,6 +218,12 @@
         color: #373737;
     }
 
+    .btn.primary.outlined {
+        border: 1px solid #ABCFD1;
+        color: #ABCFD1;
+        background: transparent;
+    }
+
     .btn.dark {
         border: 1px solid #3D8F94;
         background: transparent;
@@ -353,10 +359,11 @@
             stroke: #373737;
         }
 
-        .isSticky .nav-bottom > div{
+        .isSticky .nav-bottom>div {
             display: flex;
             justify-content: space-between;
         }
+
         .isSticky .burger {
             display: block;
             margin-left: 72px;
@@ -431,25 +438,61 @@
         left: -76px;
         position: absolute;
     }
-    .hero-cover{
+
+    .hero-cover {
         position: relative;
     }
-    .hero-cover:before{
+
+    .hero-cover:before {
         content: "";
-    
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    mix-blend-mode: multiply;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 20;
-    overflow: hidden;
-    top: 0px;
-    right: 0px;
+
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 20;
+        overflow: hidden;
+        top: 0px;
+        right: 0px;
     }
-    @media(min-width: 768px){
-        .hero-cover:before{
+
+    @media(min-width: 768px) {
+        .hero-cover:before {
             border-radius: 48px 0px 0px 0px;
+        }
+    }
+
+    .pagination a {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+        cursor: pointer;
+        padding: 12px;
+        display: block;
+        width: 50px;
+    }
+
+    .pagination a.current {
+        font-weight: 700;
+
+    }
+
+    .pagination a.current:after {
+        content: "."
+    }
+    @media(min-width: 768px) {
+        
+        .pagination a{
+            font-size: 22px;
+            transition: all .3s ease;
+        }
+        .pagination a:not(.current):hover{
+            font-weight: 500;
+        }
+        .pagination a:not(.current):active{
+            font-weight: 300;
         }
     }
 }
