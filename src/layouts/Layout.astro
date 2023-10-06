@@ -2,12 +2,13 @@
 interface Props {
 	title: string;
 	isHome: boolean;
+	textdark?: boolean;
 }
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
-const { title, isHome } = Astro.props;
+const { title, isHome, textdark } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ const { title, isHome } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header isHome={isHome} textdark={false}/>
+		<Header isHome={isHome} textdark={textdark}/>
 		<slot />
 		<Footer />
 	</body>

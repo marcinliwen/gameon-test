@@ -20,7 +20,7 @@ window.onload = () => {
    */
   const homeSwiper = new Swiper(".home-swiper", {
     slidesPerView: 1,
-    parallax:true,
+    parallax: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -53,14 +53,14 @@ window.onload = () => {
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 50,
-        modifier: 1,
-        scale: 0.9,
-        slideShadows: false,
-      },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 50,
+      modifier: 1,
+      scale: 0.9,
+      slideShadows: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -70,10 +70,7 @@ window.onload = () => {
       clickable: true,
       type: "fraction",
       formatFractionCurrent: function (number) {
-        return (
-          addZerotoDigit(number) +
-          "."
-        );
+        return addZerotoDigit(number) + ".";
       },
       formatFractionTotal: function (number) {
         return addZerotoDigit(number);
@@ -83,7 +80,7 @@ window.onload = () => {
       760: {
         slidesPerView: 2,
       },
-      1024: { slidesPerView: 3},
+      1024: { slidesPerView: 3 },
     },
     speed: 1000,
     /* autoplay: {
@@ -97,14 +94,14 @@ window.onload = () => {
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        scale:0.9,
-        modifier: 1,
-        slideShadows: false,
-      },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 0,
+      scale: 0.9,
+      modifier: 1,
+      slideShadows: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -114,10 +111,7 @@ window.onload = () => {
       clickable: true,
       type: "fraction",
       formatFractionCurrent: function (number) {
-        return (
-          addZerotoDigit(number) +
-          "."
-        );
+        return addZerotoDigit(number) + ".";
       },
       formatFractionTotal: function (number) {
         return addZerotoDigit(number);
@@ -127,7 +121,7 @@ window.onload = () => {
       760: {
         slidesPerView: 2,
       },
-      1024: { slidesPerView: 3},
+      1024: { slidesPerView: 3 },
     },
     speed: 1000,
     /* autoplay: {
@@ -141,14 +135,14 @@ window.onload = () => {
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        scale:0.9,
-        modifier: 1,
-        slideShadows: false,
-      },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 0,
+      scale: 0.9,
+      modifier: 1,
+      slideShadows: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -158,10 +152,7 @@ window.onload = () => {
       clickable: true,
       type: "fraction",
       formatFractionCurrent: function (number) {
-        return (
-          addZerotoDigit(number) +
-          "."
-        );
+        return addZerotoDigit(number) + ".";
       },
       formatFractionTotal: function (number) {
         return addZerotoDigit(number);
@@ -171,51 +162,55 @@ window.onload = () => {
       760: {
         slidesPerView: 2,
       },
-      1024: { slidesPerView: 3},
+      1024: { slidesPerView: 3 },
     },
     speed: 1000,
     /* autoplay: {
       delay: 4000,
     }, */
   });
-  const tabs = document.querySelector('.tabs-buttons .swiper-wrapper');
-  const tabContent = new Swiper('.tabs-content', {
-    onSlideChangeStart: function(swiper, event) {
-      tabs.children[swiper.previousIndex].classList.remove('active');
-      tabs.children[swiper.activeIndex].classList.add('active');
-    }
+  const tabs = document.querySelector(".tabs-buttons .swiper-wrapper");
+  const tabContent = new Swiper(".tabs-content", {
+    onSlideChangeStart: function (swiper, event) {
+      tabs.children[swiper.previousIndex].classList.remove("active");
+      tabs.children[swiper.activeIndex].classList.add("active");
+    },
   });
 
-  const tabsNav = document.querySelectorAll('.tab-btn');
-  if(tabsNav.length > 0){
-    tabsNav.forEach((tab)=>{
-      tab.addEventListener('click',(e, index)=>{
-      e.stopPropagation();
-      console.log(e,' ', index)
-    })})
+  const tabsNav = document.querySelectorAll(".tab-btn");
+  if (tabsNav.length > 0) {
+    tabsNav.forEach((tab) => {
+      tab.addEventListener("click", (e, index) => {
+        e.stopPropagation();
+        console.log(e, " ", index);
+      });
+    });
   }
-  const tabButtons = new Swiper('.tabs-buttons', {
-    slidesPerView: 'auto',
+  const tabButtons = new Swiper(".tabs-buttons", {
+    slidesPerView: "auto",
     reeMode: true,
     // scrollbar: '.swiper-scrollbar',
     mousewheelControl: true,
-    on:{
-      click: function(swiper, event) {
-        event.stopPropagation()
-        console.log('tap', swiper.clickedIndex)
-        console.log('target', event)
-        if ( event.target.classList.contains('swiper-slide') && !event.target.classList.contains('active-tab') ) {
-          console.log('event go')
-          event.target.parentElement.querySelector('.active-tab').classList.remove('active-tab');
-          event.target.classList.add('active-tab');
+    on: {
+      click: function (swiper, event) {
+        event.stopPropagation();
+        console.log("tap", swiper.clickedIndex);
+        console.log("target", event);
+        if (
+          event.target.classList.contains("swiper-slide") &&
+          !event.target.classList.contains("active-tab")
+        ) {
+          console.log("event go");
+          event.target.parentElement
+            .querySelector(".active-tab")
+            .classList.remove("active-tab");
+          event.target.classList.add("active-tab");
           tabContent.slideTo(swiper.clickedIndex);
         }
-      }
-    }
-    
+      },
+    },
   });
-  
-  
+
   /**
    * sticky header
    */
@@ -277,6 +272,20 @@ window.onload = () => {
       document.body.classList.remove("body-overflow");
     });
   }
+
+  /**
+   * play video 
+   */
+  var playButton = document.querySelector('#play_button');
+  if(playButton){
+    playButton.addEventListener('click', function(){
+      let video = document.querySelector('#video');
+      video.play();
+      video.setAttribute("controls", "");
+      this.style.display = "none";
+    })
+  }
+  
 };
 
 /** add 0 befor digit */

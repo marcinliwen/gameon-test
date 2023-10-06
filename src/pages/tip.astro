@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeHero from "../components/HomeHero.astro";
+import Sponsors from "../components/Sponsors.astro";
+import FollowUs from "../components/FollowUs.astro";
+import ReviewsSlider from "../components/ReviewsSlider.astro";
+import CoursesSlider from "../components/CoursesSlider.astro";
+import ClassesSlider from "../components/ClassesSlider.astro";
+import Subscribe from "../components/Subscribe.astro";
+---
+
+<Layout title="Tip | Game On" isHome={false} textdark={true}>
+  <section class="bg-blue-800/10 md:mt-12 pt-44 pb-24">
+    <div class="wrapper">
+    <div class="max-w-[863px] mx-auto">
+      <h1 class="mb-4">Tips & tricks</h1>
+      <p class="h2">
+        Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+    </div>
+  </section>
+  <section>
+    <div class="relative">
+      <video
+        id="video"
+        playsinline=""
+        loop=""
+        controlslist="nodownload"
+        poster="/assets/images/video-cover.png"
+        src="https://c.stocksy.com/a/XhRK00/y0/4873047.mp4"
+        class="w-full h-full object-cover z-10"
+        muted=""></video>
+      <button
+        class="absolute w-12 h-12 lg:w-20 lg:h-20 md:w-[132px] md:h-[132px] rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-all duration-300"
+        id="play_button"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="132"
+          height="132"
+          viewBox="0 0 132 132"
+          fill="none"
+          class="w-full h-full"
+        >
+          <path
+            d="M0.000289917 65.999C-0.0209961 52.8531 3.9037 40.0034 11.2665 29.1129C18.4272 18.5056 28.5105 10.2028 40.2947 5.21036C50.4045 0.93165 61.4233 -0.753077 72.3498 0.309209C83.2763 1.3715 93.7642 5.14704 102.861 11.293C113.468 18.4537 121.771 28.5372 126.763 40.3213C131.042 50.4311 132.727 61.4499 131.664 72.3764C130.602 83.3029 126.826 93.7908 120.68 102.887C113.52 113.494 103.436 121.797 91.6522 126.79C81.5423 131.068 70.5236 132.753 59.5971 131.691C48.6706 130.628 38.1827 126.853 29.0863 120.707C18.4791 113.546 10.1762 103.463 5.18374 91.6788C1.74582 83.5548 -0.0171814 74.8205 0.000289917 65.999ZM81.198 66.5065L56.8387 51.7894V81.2236L81.198 66.5065Z"
+            fill="white"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="pt-16 pb-24 bg-blue-800/10">
+    <div class="wrapper">
+    <div class="max-w-[863px] mx-auto">
+      <p class="lg:text-2xl mb-12">
+        Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
+        molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+        fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
+        elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
+        lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+        egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse
+        ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi
+        convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+        
+      </p>
+      <p class="lg:text-2xl mb-12">Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque
+        quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo
+        vestibulum venenatis. Suspendisse quis arcu sem. Aenean feugiat ex eu
+        vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus,
+        porttitor eu mauris a, blandit ultrices nibh. Mauris sit amet magna non
+        ligula vestibulum eleifend.</p>
+    </div>
+    </div>
+  </section>
+  <section class="bg-blue-800/10 pb-28">
+    <div class="container wrapper">
+        <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4 pb-10">
+            <img src="/assets/images/tip-1.png"/>
+            <img src="/assets/images/tip-2.png"/>
+            <img src="/assets/images/tip-3.png"/>
+            <img src="/assets/images/tip-3.png"/>
+            <img src="/assets/images/tip-4.png"/>
+            <img src="/assets/images/tip-1.png"/>
+            <img src="/assets/images/tip-2.png"/>
+            <img src="/assets/images/tip-3.png"/>
+            <img src="/assets/images/tip-4.png"/>
+        </div>
+        <a href="/tips-&-tricks" class="flex gap-6 items-center cursor-pointer "><span class="pl-[5px] py-[6px] pr-[7px] flex w-6 h-6 justify-center items-center bg-blue-200 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M9.20289 0.250976L2.91639 5.81398C2.88987 5.83743 2.86864 5.86626 2.85409 5.89854C2.83955 5.93082 2.83203 5.96582 2.83203 6.00123C2.83203 6.03663 2.83955 6.07163 2.85409 6.10391C2.86864 6.13619 2.88987 6.16502 2.91639 6.18848L9.20289 11.751" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></span><p>go back to all tips & tricks</p></a>
+    </div>
+  </section>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/style/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline src="/assets/js/main.js"></script>

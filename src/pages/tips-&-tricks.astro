@@ -139,15 +139,15 @@ import Subscribe from "../components/Subscribe.astro";
   </section>
   <section class="py-[73px] bg-white">
     <div class="container wrapper ">
-      <div class="flex flex-wrap justify-center gap-6 pb-[72px]">
-        <a class="btn dark full btn-text whitespace-nowrap">Category 1</a>
-        <a class="btn dark outlined btn-text whitespace-nowrap">Category 2</a>
-        <a class="btn dark outlined btn-text whitespace-nowrap">Category 3</a>
-        <a class="btn dark outlined btn-text whitespace-nowrap">Category 4</a>
-        <a class="btn dark outlined btn-text whitespace-nowrap">Category 5</a>
+      <div class="flex snap-x overflow-auto mb-[-10px] md:mb-0 md:overflow-visible md:flex-wrap md:justify-center gap-6 pb-[72px]">
+        <a class="btn dark full btn-text whitespace-nowrap snap-start">Category 1</a>
+        <a class="btn dark outlined btn-text whitespace-nowrap snap-start">Category 2</a>
+        <a class="btn dark outlined btn-text whitespace-nowrap snap-start">Category 3</a>
+        <a class="btn dark outlined btn-text whitespace-nowrap snap-start">Category 4</a>
+        <a class="btn dark outlined btn-text whitespace-nowrap snap-start">Category 5</a>
       </div>
       <div class="grid gap-12 pb-20">
-        <div class="grid md:grid-cols-2">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-0">
           <img src="/assets/images/tips-1.png" />
           <div class="grid items-center">
             <h3 class="mb-4">Lorem ipsum</h3>
@@ -162,10 +162,10 @@ import Subscribe from "../components/Subscribe.astro";
               interdum, ac aliquet odio . Nunc vulputate libero et velit
               interdum, ac aliquet odio .
             </p>
-            <a class="btn dark outlined btn-text">Category 1</a>
+            <a href="/tip" class="btn dark outlined btn-text">Category 1</a>
           </div>
         </div>
-        <div class="grid md:grid-cols-2">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-0">
             <img src="/assets/images/tips-2.png" />
             <div class="grid items-center">
               <h3 class="mb-4">Lorem ipsum</h3>
@@ -180,10 +180,10 @@ import Subscribe from "../components/Subscribe.astro";
                 interdum, ac aliquet odio . Nunc vulputate libero et velit
                 interdum, ac aliquet odio .
               </p>
-              <a class="btn dark outlined btn-text">Category 2</a>
+              <a href="/tip" class="btn dark outlined btn-text">Category 2</a>
             </div>
           </div>
-          <div class="grid md:grid-cols-2">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-0">
             <img src="/assets/images/tips-3.png" />
             <div class="grid items-center">
               <h3 class="mb-4">Lorem ipsum</h3>
@@ -198,10 +198,10 @@ import Subscribe from "../components/Subscribe.astro";
                 interdum, ac aliquet odio . Nunc vulputate libero et velit
                 interdum, ac aliquet odio .
               </p>
-              <a class="btn dark outlined btn-text">Category 3</a>
+              <a href="/tip" class="btn dark outlined btn-text">Category 3</a>
             </div>
           </div>
-          <div class="grid md:grid-cols-2">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-0">
             <img src="/assets/images/tips-4.png" />
             <div class="grid items-center">
               <h3 class="mb-4">Lorem ipsum</h3>
@@ -216,7 +216,7 @@ import Subscribe from "../components/Subscribe.astro";
                 interdum, ac aliquet odio . Nunc vulputate libero et velit
                 interdum, ac aliquet odio .
               </p>
-              <a class="btn dark outlined btn-text">Category 4</a>
+              <a href="/tip" class="btn dark outlined btn-text">Category 4</a>
             </div>
           </div>
       </div>

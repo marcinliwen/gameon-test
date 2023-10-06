@@ -130,7 +130,13 @@
         line-height: normal;
         text-transform: uppercase;
     }
-
+    .h2{
+        font-family: Work Sans;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 160%;
+    }
     .btn-text {
         font-family: Work Sans;
         font-size: 16px;
@@ -445,9 +451,7 @@
 
     .hero-cover:before {
         content: "";
-
-        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-        mix-blend-mode: multiply;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(94, 102, 103, 0.08) 100%);
         width: 100%;
         height: 100%;
         position: absolute;
@@ -495,6 +499,7 @@
             font-weight: 300;
         }
     }
+    
 }
 
 .body-overflow {
