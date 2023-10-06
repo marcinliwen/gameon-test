@@ -215,7 +215,7 @@
         cursor: pointer;
         text-align: center;
         display: block;
-        width: max-content;
+       width: 100%;
     }
 
     .btn.primary {
@@ -252,7 +252,11 @@
         background: #fff;
         color: #373737;
     }
-
+    @media(min-width: 768px){
+        .btn{
+            width: max-content;
+        }
+    }
     @media(min-width: 1024px) {
         .link {
             transition-property: all;
@@ -498,6 +502,14 @@
         .pagination a:not(.current):active{
             font-weight: 300;
         }
+    }
+    .list-disc li::marker{font-size: 0.5em;}
+    .list-disc li{
+        margin-bottom: 16px;
+        font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: 160%;
     }
     
 }
