@@ -130,13 +130,15 @@
         line-height: normal;
         text-transform: uppercase;
     }
-    .h2{
+
+    .h2 {
         font-family: Work Sans;
         font-size: 22px;
         font-style: normal;
         font-weight: 300;
         line-height: 160%;
     }
+
     .btn-text {
         font-family: Work Sans;
         font-size: 16px;
@@ -215,7 +217,7 @@
         cursor: pointer;
         text-align: center;
         display: block;
-       width: 100%;
+        width: 100%;
     }
 
     .btn.primary {
@@ -252,11 +254,13 @@
         background: #fff;
         color: #373737;
     }
-    @media(min-width: 768px){
-        .btn{
+
+    @media(min-width: 768px) {
+        .btn {
             width: max-content;
         }
     }
+
     @media(min-width: 1024px) {
         .link {
             transition-property: all;
@@ -490,30 +494,42 @@
     .pagination a.current:after {
         content: "."
     }
+
     @media(min-width: 768px) {
-        
-        .pagination a{
+
+        .pagination a {
             font-size: 22px;
             transition: all .3s ease;
         }
-        .pagination a:not(.current):hover{
+
+        .pagination a:not(.current):hover {
             font-weight: 500;
         }
-        .pagination a:not(.current):active{
+
+        .pagination a:not(.current):active {
             font-weight: 300;
         }
     }
-    .list-disc li::marker{font-size: 0.5em;}
-    .list-disc li{
+
+    .list-disc li::marker {
+        font-size: 0.5em;
+    }
+
+    .list-disc li {
         margin-bottom: 16px;
         font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: 160%;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 160%;
     }
     
-}
 
+}
+@media(min-width: 1024px){
+    .about-hero-img{
+        width: calc( 100% - ((100% - 1312px)/2 + 556px) );
+    }
+}
 .body-overflow {
     overflow: hidden;
 }
