@@ -522,7 +522,91 @@
         font-weight: 300;
         line-height: 160%;
     }
+    .custom-select {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        z-index: 10;
+      }
     
+      .custom-select-icon {
+        position: absolute;
+        right: 16px;
+        top: 20px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_156_3600)'%3E%3Cpath d='M0.450684 4.68921L9.72152 15.1667C9.76061 15.2109 9.80865 15.2463 9.86245 15.2705C9.91625 15.2948 9.97459 15.3073 10.0336 15.3073C10.0926 15.3073 10.1509 15.2948 10.2047 15.2705C10.2585 15.2463 10.3066 15.2109 10.3457 15.1667L19.6173 4.68921' stroke='%23373737' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_156_3600'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+      }
+    
+      .custom-select input:focus~.custom-select-icon {
+        transform: scaleY(-1);
+      }
+    
+      .custom-select-content {
+        height: 0px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        overflow: auto;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        background: #fff;
+        z-index: 10;
+      }
+    
+      .custom-select input:focus {
+        padding: 18px 16px;
+      }
+    
+      .custom-select input:focus+.custom-select-content {
+        height: 192px;
+      }
+    
+      .custom-select input:not(:focus):not(:placeholder-shown) {
+        background: rgba(117, 8, 67, 0.15);
+      }
+    
+      .custom-select-content li {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #373737;
+        width: 100%;
+        padding: 14px 16px;
+        background: #fff;
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+      }
+    
+      .custom-select-content li:hover {
+        background: rgb(171, 207, 209, 0.30)!important;
+      }
+    
+      .custom-select-content li:nth-child(2n) {
+        background: rgba(171, 207, 209, 0.10);
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+      }
+    
+      .custom-select-content::-webkit-scrollbar {
+        width: 3px;
+      }
+    
+      .custom-select-content::-webkit-scrollbar-track {
+        background-color: #ABCFD1;
+        margin: 8px 16px 0;
+      }
+    
+      .custom-select-content::-webkit-scrollbar-thumb {
+        background: #3D8F94;
+      }
 
 }
 @media(min-width: 1024px){

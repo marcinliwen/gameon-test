@@ -3,12 +3,13 @@ interface Props {
 	title: string;
 	isHome: boolean;
 	textdark?: boolean;
+	logoWhite? :boolean;
 }
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
-const { title, isHome, textdark } = Astro.props;
+const { title, isHome, textdark, logoWhite } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +23,7 @@ const { title, isHome, textdark } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header isHome={isHome} textdark={textdark}/>
+		<Header isHome={isHome} textdark={textdark} logoWhite={logoWhite}/>
 		<slot />
 		<Footer />
 	</body>

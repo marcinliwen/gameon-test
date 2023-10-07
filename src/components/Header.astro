@@ -2,8 +2,9 @@
 interface Props {
   isHome: boolean;
   textdark?: boolean;
+  logoWhite?: boolean;
 }
-const { isHome, textdark } = Astro.props;
+const { isHome, textdark, logoWhite } = Astro.props;
 const mainMenu = [
   {
     title: "Strona główna",
@@ -261,7 +262,7 @@ const mainMenu = [
               height="50"
               viewBox="0 0 152 50"
               fill="none"
-              class={` ${textdark ? "text-blue-800" : "text-white lg:text-blue-800" } w-20 md:w-[152px] h-auto `}
+              class={` ${textdark ? "text-blue-800" : "text-white " } ${logoWhite ? '':'lg:text-blue-800'} w-20 md:w-[152px] h-auto `}
             >
               <path
                 d="M2.64969 42.1997V49.1374H1.48049V42.1997H2.64969ZM6.14779 42.1997L3.81409 45.5495L2.41389 47.2505L2.19259 46.0402L3.15969 44.6203L4.73309 42.1997H6.14779ZM4.86309 49.1374L3.08759 45.8592L3.89109 45.0348L6.24399 49.1374H4.86309Z"
