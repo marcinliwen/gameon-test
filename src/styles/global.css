@@ -608,6 +608,17 @@
         background: #3D8F94;
       }
 
+    #password.hide ~ .toggle-password .open{
+        opacity: 0;
+    }
+    #password.hide ~ .toggle-password .close{
+        opacity: 1;
+    }
+    #password ~ .toggle-password {
+        position: absolute;
+    right: 16px;
+    top: 20px;
+    }
 }
 @media(min-width: 1024px){
     .about-hero-img{
