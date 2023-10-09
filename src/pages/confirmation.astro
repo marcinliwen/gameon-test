@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeHero from "../components/HomeHero.astro";
+import Sponsors from "../components/Sponsors.astro";
+import FollowUs from "../components/FollowUs.astro";
+import ReviewsSlider from "../components/ReviewsSlider.astro";
+import CoursesSlider from "../components/CoursesSlider.astro";
+import ClassesSlider from "../components/ClassesSlider.astro";
+import Subscribe from "../components/Subscribe.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+---
+
+<Layout title="Get in touch | Game On" isHome={false} logoWhite={true}>
+  <section class="bg-white md:pt-12 relative">
+    <div
+      class="container wrapper pt-[144px] pb-[123px] relative z-20 grid items-center"
+    >
+      <div class="max-w-[512px]">
+        <h1 class="mb-4 text-white">All went well</h1>
+        <p class="text-white">Thanks for your purchase</p>
+      </div>
+      <svg
+        width="177"
+        height="213"
+        viewBox="0 0 177 213"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute right-0 bottom-0 hidden md:block text-white"
+      >
+        <g clip-path="url(#clip0_58_3935)">
+          <path
+            d="M57.752 63.8918C55.0751 64.569 53.2409 65.5804 51.5851 67.2647C48.8107 70.019 48.627 71.8594 50.4302 79.2259C51.8276 84.9291 51.954 87.8772 51.059 93.8473C50.4945 97.5737 50.4493 98.7319 50.8411 99.9171C52.581 105.131 63.5926 107.36 68.8749 103.575C71.1274 101.953 71.8985 99.8556 72.1445 94.7423C72.3081 90.8681 72.8958 86.5825 73.6493 83.8877C73.8298 83.284 73.4708 83.2148 69.5479 83.3303C67.2101 83.3991 64.5983 83.5957 63.8093 83.7386C62.2722 84.0631 62.1976 84.2248 61.7984 86.8295L61.6052 88.351L64.0224 88.2798C65.5281 88.2355 66.4046 88.3693 66.414 88.6881C66.4386 89.5251 65.3886 95.6194 65.0228 96.6673C64.5103 98.1184 62.7542 99.0876 60.4956 99.1541C58.9106 99.2008 58.3499 99.0179 57.5736 98.2429L56.6341 97.3132L57.5514 92.1004C58.6352 85.8057 58.5434 81.3406 57.3186 76.1111C56.4578 72.4665 56.4531 72.3071 57.1381 71.3296C58.5433 69.2139 62.2284 69.1054 64.7858 71.1044C66.1659 72.1807 66.7115 73.2018 67.3857 75.8945C67.6563 77.0035 67.6959 77.0023 71.0244 76.9043L74.3926 76.8052L74.3456 75.2109C74.287 73.2181 73.4778 71.3272 71.6231 68.9485C68.2424 64.5803 62.79 62.5867 57.752 63.8918Z"
+            fill="currentColor"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M76.869 72.9913C75.9332 69.0848 75.874 64.406 76.723 61.9513C77.8799 58.511 82.6499 55.1747 87.6506 54.2243C90.9252 53.6293 95.3569 54.2514 98.0752 55.6955C101.657 57.6182 102.686 60.1821 101.443 64.2944C100.265 68.0721 100.301 70.8266 101.549 76.6224C103.321 84.8653 102.72 88.9339 99.2949 91.8904C97.7648 93.2287 95.1025 94.3307 92.4135 95.0766L89.294 90.6445C93.0402 90.7829 94.7906 89.0705 95.1265 83.1556C95.3234 80.0773 95.1579 78.6695 94.3261 75.6947C93.4311 72.3772 93.3578 71.5257 93.6841 66.4233C94.0401 60.8571 94.0455 60.7728 93.0202 60.1568C90.4851 58.5127 85.5638 59.5528 84.3444 61.973C83.1674 64.3958 83.1804 69.5199 84.4024 74.3826C85.5432 78.9889 85.7265 80.302 84.6227 84.0076L76.869 72.9913Z"
+            fill="currentColor"></path>
+          <path d="M77 73L226 286" stroke="currentColor" stroke-width="0.5"
+          ></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_58_3935">
+            <rect width="310.08" height="408.832" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <img
+      src="/assets/images/contact.png"
+      class="absolute inset-0 z-10 w-full h-full object-cover"
+    />
+  </section>
+  <section class="bg-white py-20">
+    <div class="container wrapper">
+      <p class="max-w-[512px]">
+        Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+      <a href="/" class="flex gap-6 items-center cursor-pointer mt-16">
+        <span
+          class="pl-[5px] py-[6px] pr-[7px] flex w-6 h-6 justify-center items-center bg-blue-200 rounded-full"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M9.20289 0.250976L2.91639 5.81398C2.88987 5.83743 2.86864 5.86626 2.85409 5.89854C2.83955 5.93082 2.83203 5.96582 2.83203 6.00123C2.83203 6.03663 2.83955 6.07163 2.85409 6.10391C2.86864 6.13619 2.88987 6.16502 2.91639 6.18848L9.20289 11.751"
+              stroke="#373737"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <p class="">go back to home</p>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/style/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline src="/assets/js/main.js"></script>

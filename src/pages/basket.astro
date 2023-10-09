@@ -1,0 +1,365 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeHero from "../components/HomeHero.astro";
+import Sponsors from "../components/Sponsors.astro";
+import FollowUs from "../components/FollowUs.astro";
+import ReviewsSlider from "../components/ReviewsSlider.astro";
+import CoursesSlider from "../components/CoursesSlider.astro";
+import ClassesSlider from "../components/ClassesSlider.astro";
+import Subscribe from "../components/Subscribe.astro";
+import AboutUs from "../components/AboutUs.astro";
+import OfferTab from "../components/OfferTab.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+---
+
+<Layout title="Basket | Game On" isHome={false} textdark={true}>
+    <form>
+  <section class="pt-36 bg-blue-100 pb-20 md:mt-12">
+    <div class="container wrapper">
+      <h1 class="block text-gray-800 mb-16">Basket</h1>
+      <div class="max-w-[1090px] mx-auto ">
+      <div class="grid gap-10">
+        {
+          [1, 2, 3].map((item) => {
+            return (
+              <div class="md:flex text-center md:text-left md:items-center">
+                <img
+                  src="/assets/images/basket.png"
+                  class="mx-auto mb-4 md:mb-0 md:ml-0 max-w-[204px] w-full h-auto"
+                />
+                <div class="md:ml-10 md:mr-16 flex-1">
+                  <h5 class="mb-4 text-gray-800">Purchase 1</h5>
+                  <div class="flex items-center mb-4">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2486)">
+                        <path
+                          d="M9.64648 4.15933C10.9998 3.88733 12.0898 2.784 12.3618 1.396C12.6352 2.784 13.7238 3.88733 15.0772 4.15933M15.0772 4.16066C13.7238 4.43333 12.6345 5.536 12.3618 6.92466C12.0892 5.536 10.9998 4.43333 9.64648 4.16066"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.923828 5.914H7.80516"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 9.14334H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 12.3753H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 15.604H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2486">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Description</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">Kite Clinics</span>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2467)">
+                        <path
+                          d="M1.00065 2.16734H15.0007C15.0007 2.16734 15.6673 2.16734 15.6673 2.834V15.5007C15.6673 15.5007 15.6673 16.1673 15.0007 16.1673H1.00065C1.00065 16.1673 0.333984 16.1673 0.333984 15.5007V2.834C0.333984 2.834 0.333984 2.16734 1.00065 2.16734Z"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.66602 0.834V4.16733"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.334 0.834V4.16733"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 5.50066H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 10.834H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 8.16734H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 13.5007H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2467">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Date</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">12.12.2022</span>
+                  </div>
+                  <div class="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2198)">
+                        <path
+                          d="M2.33398 4.50134H13.6673C13.6673 4.50134 15.6673 4.50134 15.6673 6.50134V13.168C15.6673 13.168 15.6673 15.168 13.6673 15.168H2.33398C2.33398 15.168 0.333984 15.168 0.333984 13.168V6.50134C0.333984 6.50134 0.333984 4.50134 2.33398 4.50134Z"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5.66602 4.5V3.16667C5.6669 2.81332 5.80765 2.47469 6.05751 2.22483C6.30737 1.97497 6.646 1.83422 6.99935 1.83334H8.99935C9.35265 1.83439 9.69117 1.97521 9.94099 2.22503C10.1908 2.47485 10.3316 2.81337 10.3327 3.16667V4.5"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 7.83467V7.168"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.99938 7.83334H7.64404C7.43633 7.83348 7.23514 7.90589 7.07498 8.03816C6.91482 8.17042 6.80567 8.35429 6.76626 8.55823C6.72684 8.76217 6.75961 8.97347 6.85895 9.15588C6.95829 9.3383 7.11801 9.48047 7.31071 9.558L8.68671 10.108C8.87984 10.1853 9.04001 10.3274 9.13968 10.51C9.23936 10.6925 9.2723 10.9041 9.23284 11.1084C9.19338 11.3126 9.08399 11.4967 8.92349 11.629C8.76298 11.7613 8.56139 11.8336 8.35338 11.8333H6.99938"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 12.5013V11.8347"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2198">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Price</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">100 EUR</span>
+                  </div>
+                </div>
+                <button type="button" class="mt-4 md:mt-0 lg:hover:scale-110 lg:active:scale-105 transition-all duration-300">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_58_2505)">
+                      <path
+                        d="M39.5 16.5L16.5 39.5"
+                        stroke="#3D8F94"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M39.5 39.5L16.5 16.5"
+                        stroke="#3D8F94"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="55"
+                      height="55"
+                      rx="27.5"
+                      stroke="#3D8F94"
+                    />
+                    <defs>
+                      <clipPath id="clip0_58_2505">
+                        <rect
+                          width="24"
+                          height="24"
+                          fill="white"
+                          transform="translate(16 16)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            );
+          })
+        }
+      </div>
+      <h3 class="mb-6 mt-16">Total</h3>
+      <div class="flex gap-4">
+        <h4>Price including Vat:</h4>
+        <h5>600 EUR</h5>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="bg-white py-16">
+    <div class="container wrapper ">
+        <div class="max-w-[1090px] mx-auto">
+            <h3 class="mb-6">Billing details</h3>
+      <div class="max-w-[562px]">
+        <div class="grid gap-6">
+          <Input type="text" name="name" placeholder="Name" />
+          <Input type="text" name="surname" placeholder="Surname" />
+          <Input type="email" name="e-mail" placeholder="E-mail" />
+          <Input
+            type="tel"
+            name="phone"
+            placeholder="Telephone"
+            className=" mb-20"
+          />
+          <Select
+            name="country"
+            placeholder="Country"
+            options={["Polska", "Niemcy", "Czechy", "Słowacja"]}
+          />
+          <Input type="text" name="street" placeholder="Street address" />
+          <Input type="text" name="post-code" placeholder="Post code" />
+          <Input type="text" name="city" placeholder="City" />
+        </div>
+      </div>
+        </div>
+      
+    </div>
+  </section>
+  <section class="bg-blue-100 pt-16 pb-36">
+    <div class="container wrapper">
+        <div class="max-w-[1090px] mx-auto">
+      <h3 class="mb-6">Payment method</h3>
+      <div>
+        
+          <div>
+            <div class="form-control custom-radio mb-6">
+              <label class="label cursor-pointer flex items-center gap-8">
+                <input
+                  type="radio"
+                  name="delivery"
+                  class="radio checked:bg-blue-800 cursor-pointer h-6 w-6 accent-blue-800"
+                  checked
+                />
+                <h4 class="label-text">Fast electronic Payment (Dotpay)</h4>
+              </label>
+            </div>
+            <div class="form-control custom-radio mb-6">
+              <label class="label cursor-pointer flex items-center gap-8"
+                >
+                <input
+                  type="radio"
+                  name="delivery"
+                  class="radio checked:bg-blue-800 cursor-pointer h-6 w-6 accent-blue-800"
+                />
+                <h4 class="label-text">Classic Ban Transfer</h4>
+              </label>
+            </div>
+            <div class="form-control custom-radio mb-6">
+              <label class="label cursor-pointer flex items-center gap-8">
+                <input
+                  type="radio"
+                  name="delivery"
+                  class="radio checked:bg-blue-800 cursor-pointer h-6 w-6 accent-blue-800"
+                />
+                <h4 class="label-text">PayPal</h4>
+              </label>
+            </div>
+          </div>
+          <button onclick="location.href='/confirmation'" type="button" class="btn dark full btn-text mt-16">Place order</button>
+      </div>
+      </div>
+    </div>
+  </section>
+  </form>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/style/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline src="/assets/js/main.js"></script>

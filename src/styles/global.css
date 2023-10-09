@@ -568,7 +568,7 @@
       }
     
       .custom-select input:not(:focus):not(:placeholder-shown) {
-        background: rgba(117, 8, 67, 0.15);
+        background: rgba(171, 207, 209, 0.30);
       }
     
       .custom-select-content li {

@@ -1,0 +1,282 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeHero from "../components/HomeHero.astro";
+import Sponsors from "../components/Sponsors.astro";
+import FollowUs from "../components/FollowUs.astro";
+import ReviewsSlider from "../components/ReviewsSlider.astro";
+import CoursesSlider from "../components/CoursesSlider.astro";
+import ClassesSlider from "../components/ClassesSlider.astro";
+import Subscribe from "../components/Subscribe.astro";
+import AboutUs from "../components/AboutUs.astro";
+import OfferTab from "../components/OfferTab.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+---
+
+<Layout title="Basket | Game On" isHome={false} textdark={true}>
+  <section class="pt-36 bg-blue-100 pb-20 md:mt-12">
+    <div class="container wrapper">
+      <h1 class="block text-gray-800 mb-16">Account</h1>
+      <div class="max-w-[1090px] mx-auto ">
+      <div class="grid gap-10">
+        {
+          [1, 2, 3].map((item) => {
+            return (
+              <div class="md:flex md:items-center text-center md:text-left">
+                <img
+                  src="/assets/images/basket.png"
+                  class="mx-auto mb-4 md:mb-0 md:ml-0 max-w-[204px] w-full  h-auto"
+                />
+                <div class="md:ml-10 md:mr-16 flex-1">
+                  <h5 class="mb-4 text-gray-800">Purchase 1</h5>
+                  <div class="flex items-center mb-4">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2486)">
+                        <path
+                          d="M9.64648 4.15933C10.9998 3.88733 12.0898 2.784 12.3618 1.396C12.6352 2.784 13.7238 3.88733 15.0772 4.15933M15.0772 4.16066C13.7238 4.43333 12.6345 5.536 12.3618 6.92466C12.0892 5.536 10.9998 4.43333 9.64648 4.16066"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.923828 5.914H7.80516"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 9.14334H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 12.3753H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M0.923828 15.604H14.7672"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2486">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Description</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">Kite Clinics</span>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2467)">
+                        <path
+                          d="M1.00065 2.16734H15.0007C15.0007 2.16734 15.6673 2.16734 15.6673 2.834V15.5007C15.6673 15.5007 15.6673 16.1673 15.0007 16.1673H1.00065C1.00065 16.1673 0.333984 16.1673 0.333984 15.5007V2.834C0.333984 2.834 0.333984 2.16734 1.00065 2.16734Z"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.66602 0.834V4.16733"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.334 0.834V4.16733"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 5.50066H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 5.50066V16.1673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 10.834H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 8.16734H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M0.333984 13.5007H15.6673"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2467">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Date</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">12.12.2022</span>
+                  </div>
+                  <div class="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      class="mr-6"
+                    >
+                      <g clip-path="url(#clip0_58_2198)">
+                        <path
+                          d="M2.33398 4.50134H13.6673C13.6673 4.50134 15.6673 4.50134 15.6673 6.50134V13.168C15.6673 13.168 15.6673 15.168 13.6673 15.168H2.33398C2.33398 15.168 0.333984 15.168 0.333984 13.168V6.50134C0.333984 6.50134 0.333984 4.50134 2.33398 4.50134Z"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5.66602 4.5V3.16667C5.6669 2.81332 5.80765 2.47469 6.05751 2.22483C6.30737 1.97497 6.646 1.83422 6.99935 1.83334H8.99935C9.35265 1.83439 9.69117 1.97521 9.94099 2.22503C10.1908 2.47485 10.3316 2.81337 10.3327 3.16667V4.5"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 7.83467V7.168"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.99938 7.83334H7.64404C7.43633 7.83348 7.23514 7.90589 7.07498 8.03816C6.91482 8.17042 6.80567 8.35429 6.76626 8.55823C6.72684 8.76217 6.75961 8.97347 6.85895 9.15588C6.95829 9.3383 7.11801 9.48047 7.31071 9.558L8.68671 10.108C8.87984 10.1853 9.04001 10.3274 9.13968 10.51C9.23936 10.6925 9.2723 10.9041 9.23284 11.1084C9.19338 11.3126 9.08399 11.4967 8.92349 11.629C8.76298 11.7613 8.56139 11.8336 8.35338 11.8333H6.99938"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 12.5013V11.8347"
+                          stroke="#3D8F94"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_58_2198">
+                          <rect
+                            width="16"
+                            height="16"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="btn-text text-blue-800 mr-2 leading-[19px]">Price</span>
+                    <span class="btn-text text-gray-800 leading-[19px]">100 EUR</span>
+                  </div>
+                </div>
+                
+                <a href="/account-preview" class="mt-4 md:mt-0 btn dark full btn-text">
+                    Show details
+                </a>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div class="flex justify-between items-center mt-20">
+        <a class="cursor-pointer lg:hover:scale-125 lg:active:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <g clip-path="url(#clip0_38_1087)">
+              <path d="M18.4058 1.0022L5.83278 12.1282C5.77974 12.1751 5.73727 12.2328 5.70819 12.2973C5.6791 12.3619 5.66406 12.4319 5.66406 12.5027C5.66406 12.5735 5.6791 12.6435 5.70819 12.7081C5.73727 12.7726 5.77974 12.8303 5.83278 12.8772L18.4058 24.0022" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_38_1087">
+                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+            </defs>
+          </svg></a>
+          <div class="flex items-center gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="10" viewBox="0 0 27 10" fill="none" >
+                <path d="M20.0595 0.298717C20.0661 0.64154 19.9997 0.981827 19.8649 1.29548C19.7302 1.60914 19.5303 1.88873 19.2795 2.11467C18.7469 2.607 18.05 2.86885 17.3342 2.84595C16.7142 2.82056 16.1054 2.66883 15.5432 2.39914C14.8856 2.11357 14.2453 1.78757 13.6258 1.42311C12.8916 1.01199 12.1158 0.684625 11.3124 0.44707C10.3647 0.149165 9.37905 -0.00152583 8.38805 1.16468e-05C5.56752 1.16468e-05 3.46636 0.889806 2.08462 2.66913C0.623295 4.70614 -0.108507 7.19961 0.013027 9.72766H6.91144C6.90236 9.38378 6.96631 9.04203 7.0988 8.72614C7.23129 8.41026 7.42913 8.12797 7.67859 7.89871C8.22782 7.40603 8.94043 7.1494 9.66862 7.18242C10.4682 7.23424 11.2453 7.47569 11.9392 7.88747C12.8294 8.35737 13.847 8.82687 14.9919 9.29608C16.1435 9.76705 17.3724 10.006 18.6118 9.99989C21.4323 9.99989 23.5335 9.11503 24.9152 7.34526C26.3772 5.31364 27.1092 2.82401 26.9868 0.299965L20.0595 0.298717Z" fill="#3D8F94"/>
+              </svg>
+              <nav>
+            <ul class="flex pagination">
+                <li><a class="current">01</a></li>
+                <li><a>02</a></li>
+                <li><a>03</a></li>
+                
+            </ul>
+            </nav>
+          </div>
+       
+        <a class="cursor-pointer lg:hover:scale-125 lg:active:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <g clip-path="url(#clip0_38_1094)">
+              <path d="M5.66405 24.0022L18.237 12.8762C18.2901 12.8293 18.3326 12.7716 18.3616 12.7071C18.3907 12.6425 18.4058 12.5725 18.4058 12.5017C18.4058 12.4309 18.3907 12.3609 18.3616 12.2963C18.3326 12.2318 18.2901 12.1741 18.237 12.1272L5.66405 1.0022" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_38_1094">
+                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+            </defs>
+          </svg></a>
+      </div>
+    </div>
+    </div>
+  </section>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/style/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline src="/assets/js/main.js"></script>

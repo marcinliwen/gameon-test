@@ -285,7 +285,16 @@ window.onload = () => {
       this.style.display = "none";
     })
   }
-
+/**
+   * custom select
+   */
+const options = document.querySelectorAll(".custom-select li");
+const selectInput = document.querySelector(".custom-select input");
+options.forEach((item) => {
+  item.addEventListener("click", () => {
+    selectInput.setAttribute("value", item.dataset.value);
+  });
+});
 
 };
 
