@@ -224,8 +224,13 @@
         border: 1px solid #ABCFD1;
         background: #ABCFD1;
         color: #373737;
+        transition: all .3s ease-in-out;
     }
-
+    .btn.primary:hover{
+        background: #373737;
+        color: #ABCFD1;
+        border-color: #373737;
+    }
     .btn.primary.outlined {
         border: 1px solid #ABCFD1;
         color: #ABCFD1;
@@ -236,25 +241,46 @@
         border: 1px solid #3D8F94;
         background: transparent;
         color: #3D8F94;
+        transition: all .3s ease-in-out;
     }
-
+    .btn.dark:hover{
+        background: #3D8F94;
+        color: #fff;
+    }
     .btn.dark.full {
         background: #3D8F94;
         color: #fff;
+        transition: all .3s ease-in-out;
+    }
+    .btn.dark.full:hover{
+        color:#3D8F94;
+        background: #fff;
     }
 
     .btn.secondary.outlined {
         border: 1px solid #fff;
         background: transparent;
         color: #fff;
+        transition: all .3s ease-in-out;
     }
-
+    .btn.secondary.outlined:hover{
+        background:#fff;
+        color:#3D8F94;
+    }
     .btn.secondary.full {
         border: 1px solid #fff;
         background: #fff;
         color: #373737;
+        transition: all .3s ease-in-out;
     }
-
+    .btn.secondary.full:hover{
+        background: #373737;
+        color: #fff;
+        border-color: #373737;
+    }
+.btn:active{
+    filter: opacity(0.8)
+}
     @media(min-width: 768px) {
         .btn {
             width: max-content;
