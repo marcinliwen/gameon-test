@@ -289,19 +289,18 @@
 
     @media(min-width: 1024px) {
         .link {
-            transition-property: all;
-            transition-duration: 300ms;
-            transition-timing-function: ease-in-out;
+           
         }
 
         .link:after {
             content: "";
             position: absolute;
             opacity: 0.7;
-            left: 0;
             bottom: -2px;
             right: 0;
-            height: 0;
+            width: 0;
+            height: 1px;
+
             background: currentColor;
             transition: all 0.3s ease;
         }
@@ -310,10 +309,18 @@
             position: relative;
         }
 
-        .link:hover::after {
-            height: 2px;
+        .link:hover::after, a:hover .link:after {
+            width: 100%;
+            left: 0;
             transition: all 0.3s ease;
         }
+    }
+    .active .link {
+        font-weight: 700;
+    }
+    
+    .active svg {
+        stroke-width: 1.5px;
     }
 
 

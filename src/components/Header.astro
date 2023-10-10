@@ -5,7 +5,8 @@ interface Props {
   logoWhite?: boolean;
 }
 const { isHome, textdark, logoWhite } = Astro.props;
-
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1)
 ---
 
 <header id="header" class="fixed left-0 right-0 top-0 z-50">
@@ -59,7 +60,7 @@ const { isHome, textdark, logoWhite } = Astro.props;
         class="flex gap-[42px] items-center w-full justify-evenly md:w-auto md:justify-end"
       >
         <li>
-          <a href="/contact" class="flex items-center gap-4 cursor-pointer">
+          <a  href="/contact" class={`flex items-center gap-4 cursor-pointer ${currentPath === 'contact' ? 'active' :''}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -78,11 +79,11 @@ const { isHome, textdark, logoWhite } = Astro.props;
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            <span class="uppercase hidden md:block">Contact</span>
+            <span class="uppercase hidden md:block link">Contact</span>
           </a>
         </li>
         <li>
-          <a href="/basket" class="flex items-center gap-4 cursor-pointer">
+          <a href="/basket" class={`flex items-center gap-4 cursor-pointer ${currentPath === 'basket' ? 'active' :''}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -101,7 +102,7 @@ const { isHome, textdark, logoWhite } = Astro.props;
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            <span class="uppercase hidden md:block">Basket</span>
+            <span class="uppercase hidden md:block link">Basket</span>
           </a>
         </li>
         <li>
@@ -141,7 +142,7 @@ const { isHome, textdark, logoWhite } = Astro.props;
                 </clipPath>
               </defs>
             </svg>
-            <span class="uppercase hidden md:block">Account</span>
+            <span class="uppercase hidden md:block link">Account</span>
           </a>
         </li>
       </ul>
@@ -357,10 +358,10 @@ const { isHome, textdark, logoWhite } = Astro.props;
             <li>
               <a
               href="/yoga-&-training"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'yoga-&-training' ? 'active' :''}  ${
                   textdark
                     ? ""
-                    : "md:hover:text-blue-200 transition-all duration-300 ease-in-out"
+                    : ""
                 }`}
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -395,16 +396,16 @@ const { isHome, textdark, logoWhite } = Astro.props;
                     stroke-linecap="round"
                     stroke-linejoin="round"></path>
                 </svg>
-                <span>YOGA & TRAINING</span></a
+                <span class="link">YOGA & TRAINING</span></a
               >
             </li>
             <li>
               <a
               href="/kiteboard-clinics"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'kiteboard-clinics' ? 'active':''}  ${
                   textdark
                     ? ""
-                    : "md:hover:text-blue-200 transition-all duration-300 ease-in-out "
+                    : ""
                 }`}
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -461,16 +462,16 @@ const { isHome, textdark, logoWhite } = Astro.props;
                     </clipPath>
                   </defs>
                 </svg>
-                <span class="">KITEBOARD CLINICS</span></a
+                <span class="link">KITEBOARD CLINICS</span></a
               >
             </li>
             <li>
               <a
               href="/tips-&-tricks"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'tips-&-tricks' ? 'active' :''}  ${
                   textdark
                     ? ""
-                    : "md:hover:text-blue-200 transition-all duration-300 ease-in-out"
+                    : ""
                 }`}
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -527,7 +528,7 @@ const { isHome, textdark, logoWhite } = Astro.props;
                     </clipPath>
                   </defs>
                 </svg>
-                <span class="">TIPS & TRICKS</span></a
+                <span class="link">TIPS & TRICKS</span></a
               >
             </li>
           </ul>
