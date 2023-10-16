@@ -657,7 +657,94 @@
     .about-hero-img{
         width: calc( 100% - ((100% - 1312px)/2 + 556px) );
     }
+    
+      
 }
 .body-overflow {
     overflow: hidden;
+}
+
+.has-wave{
+    overflow: hidden;
+    position: relative;
+    border-color: #3D8F94!important;
+}
+.has-wave span{
+    position: relative;
+    z-index: 1;
+}
+.has-wave:hover{
+    background: #fff!important;
+    border-color: #3D8F94!important;
+}
+.wave {
+	background-color: #3D8F94;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: calc(100% + 22px);
+	transition: top 1s ease;
+	width: 100%;
+
+}
+
+.wave:before{
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='%233D8F94'/%3E%3C/svg%3E");
+    -webkit-animation: wave 0.5s linear infinite;
+    animation: wave 0.5s linear infinite;
+    background-size: contain;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -22px;
+    width: 100%;
+}
+.has-wave-white{
+    overflow: hidden;
+    position: relative;
+    
+}
+.wave-white{
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: calc(100% + 22px);
+	transition: top 1s ease;
+	width: 100%;
+    background: #fff;
+
+}
+.has-wave-white:hover{
+    background-color: #3D8F94!important;
+}
+.has-wave-white span{
+    position: relative;
+    z-index: 1;
+}
+.wave-white:before{
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='white'/%3E%3C/svg%3E");
+    -webkit-animation: wave 0.5s linear infinite;
+    animation: wave 0.5s linear infinite;
+    background-size: contain;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -22px;
+    width: 100%;
+}
+a:hover .wave,
+a:focus .wave,
+a:active .wave,
+a:hover .wave-white,
+a:focus .wave-white,
+a:active .wave-white  {
+	top: 0;
+}
+
+@keyframes wave {
+	to {
+		background-position-x: 118px;
+	}
 }

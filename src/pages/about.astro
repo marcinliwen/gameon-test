@@ -11,12 +11,14 @@ import Subscribe from "../components/Subscribe.astro";
 
 <Layout title="Welcome to Astro." isHome={false}>
   <section class="bg-blue-800/10 md:pt-12 h-screen relative">
-   <div class="container wrapper relative grid lg:grid-cols-2 h-full">
+    <div class="container wrapper relative grid lg:grid-cols-2 h-full">
       <div class="md:py-0 relative z-30">
         <div
           class="max-w-[512px] flex flex-col justify-center md:justify-end lg:justify-center h-full md:pb-[5vh] lg:pb-0"
         >
-          <h1 class="mb-4 text-white md:text-gray-800">About game on Kiteboarding</h1>
+          <h1 class="mb-4 text-white md:text-gray-800">
+            About game on Kiteboarding
+          </h1>
           <p class="mb-8 md:mb-16 text-white md:text-gray-800">
             Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             vulputate libero et velit interdum, ac aliquet odio mattis. Class
@@ -26,66 +28,139 @@ import Subscribe from "../components/Subscribe.astro";
           <a class="btn dark full btn-text text-white">Show me more</a>
         </div>
       </div>
-
     </div>
     <div
-      class="hero-cover absolute right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full  md:rounded-tl-[48px] overflow-hidden about-hero-img"
+      class="hero-cover absolute right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full md:rounded-tl-[48px] overflow-hidden about-hero-img"
     >
       <img
         src="/assets/images/about-hero.png"
         class="relative w-full h-full object-cover"
       />
-    </div> 
+    </div>
   </section>
   <section class="bg-white py-24">
     <div class="wrapper container">
-        <div class="flex md:gap-20 mb-20 flex-wrap lg:flex-nowrap">
-            <img src="/assets/images/about-1.png" class="rounded-full w-full max-w-[424px] h-auto object-contain mx-auto lg:ml-[111px] mb-8 md:mb-0"/>
-            <div class="text-center lg:text-left">
-                <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8 mx-auto lg:ml-0 hidden md:block">
-                    <rect y="0.5" width="100" height="100" rx="50" fill="#ABCFD1"/>
-                    <rect x="10" y="10.5" width="80" height="80" rx="40" fill="#ABCFD1"/>
-                    <path d="M39.1539 35.072C41.0099 35.072 42.5566 35.5747 43.7939 36.58C45.1086 37.508 46.1139 38.8227 46.8099 40.524C47.5059 42.148 47.8539 44.0813 47.8539 46.324C47.8539 48.876 47.3899 51.3893 46.4619 53.864C45.6112 56.3387 44.2579 58.62 42.4019 60.708C40.5459 62.796 38.1486 64.536 35.2099 65.928L30.3379 61.404C32.4259 60.708 34.2432 59.7413 35.7899 58.504C37.4139 57.2667 38.7286 55.8747 39.7339 54.328C40.7392 52.7813 41.3966 51.196 41.7059 49.572L41.2419 49.34C40.9326 49.572 40.5459 49.7653 40.0819 49.92C39.6179 50.0747 38.9219 50.152 37.9939 50.152C37.0659 50.152 36.0992 49.8813 35.0939 49.34C34.1659 48.7987 33.3539 48.0253 32.6579 47.02C31.9619 45.9373 31.6139 44.5453 31.6139 42.844C31.6139 41.452 31.9619 40.176 32.6579 39.016C33.3539 37.7787 34.2432 36.812 35.3259 36.116C36.4859 35.42 37.7619 35.072 39.1539 35.072ZM60.9619 35.072C62.8179 35.072 64.3646 35.5747 65.6019 36.58C66.9166 37.508 67.9219 38.8227 68.6179 40.524C69.3139 42.148 69.6619 44.0813 69.6619 46.324C69.6619 48.876 69.1979 51.3893 68.2699 53.864C67.4192 56.3387 66.0659 58.62 64.2099 60.708C62.3539 62.796 59.9566 64.536 57.0179 65.928L52.1459 61.404C54.2339 60.708 56.0512 59.7413 57.5979 58.504C59.2219 57.2667 60.5366 55.8747 61.5419 54.328C62.5472 52.7813 63.2046 51.196 63.5139 49.572L63.0499 49.34C62.7406 49.572 62.3539 49.7653 61.8899 49.92C61.4259 50.0747 60.7299 50.152 59.8019 50.152C58.8739 50.152 57.9072 49.8813 56.9019 49.34C55.9739 48.7987 55.1619 48.0253 54.4659 47.02C53.7699 45.9373 53.4219 44.5453 53.4219 42.844C53.4219 41.452 53.7699 40.176 54.4659 39.016C55.1619 37.7787 56.0512 36.812 57.1339 36.116C58.2939 35.42 59.5699 35.072 60.9619 35.072Z" fill="white"/>
-                    </svg>
-                <p class="mb-8">Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
-                    <h5 class="mb-2">Karolina Winkowska</h5>
-                    <h5 class="text-blue-800">@karolinawinkowska</h5>
-            </div>
+      <div class="flex md:gap-20 mb-20 flex-wrap lg:flex-nowrap">
+        <svg id="blob-1" viewBox="0 0 200 200" class=" mb-8 md:mb-0 lg:ml-[111px]">
+          <defs>
+            <mask id="blob-mask">
+              <path id="mask-path" d="M149.5 100C149.5 127.338 127.338 149.5 100 149.5C72.6619 149.5 50.5 127.338 50.5 100C50.5 72.6619 72.6619 50.5 100 50.5C127.338 50.5 149.5 72.6619 149.5 100Z" fill="#fff" stroke="none" />
+            </mask>
+          </defs>
+          <image
+            width="100%"
+            height="100%"
+            href="/assets/images/about-1.png"
+            mask="url(#blob-mask)"
+          />
+        </svg>
+        <!--             <img src="/assets/images/about-1.png" class="rounded-full w-full max-w-[424px] h-auto object-contain mx-auto lg:ml-[111px] mb-8 md:mb-0"/>
+ -->
+        <div class="text-center lg:text-left">
+          <svg
+            width="100"
+            height="101"
+            viewBox="0 0 100 101"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mb-8 mx-auto lg:ml-0 hidden md:block"
+          >
+            <rect y="0.5" width="100" height="100" rx="50" fill="#ABCFD1"
+            ></rect>
+            <rect x="10" y="10.5" width="80" height="80" rx="40" fill="#ABCFD1"
+            ></rect>
+            <path
+              d="M39.1539 35.072C41.0099 35.072 42.5566 35.5747 43.7939 36.58C45.1086 37.508 46.1139 38.8227 46.8099 40.524C47.5059 42.148 47.8539 44.0813 47.8539 46.324C47.8539 48.876 47.3899 51.3893 46.4619 53.864C45.6112 56.3387 44.2579 58.62 42.4019 60.708C40.5459 62.796 38.1486 64.536 35.2099 65.928L30.3379 61.404C32.4259 60.708 34.2432 59.7413 35.7899 58.504C37.4139 57.2667 38.7286 55.8747 39.7339 54.328C40.7392 52.7813 41.3966 51.196 41.7059 49.572L41.2419 49.34C40.9326 49.572 40.5459 49.7653 40.0819 49.92C39.6179 50.0747 38.9219 50.152 37.9939 50.152C37.0659 50.152 36.0992 49.8813 35.0939 49.34C34.1659 48.7987 33.3539 48.0253 32.6579 47.02C31.9619 45.9373 31.6139 44.5453 31.6139 42.844C31.6139 41.452 31.9619 40.176 32.6579 39.016C33.3539 37.7787 34.2432 36.812 35.3259 36.116C36.4859 35.42 37.7619 35.072 39.1539 35.072ZM60.9619 35.072C62.8179 35.072 64.3646 35.5747 65.6019 36.58C66.9166 37.508 67.9219 38.8227 68.6179 40.524C69.3139 42.148 69.6619 44.0813 69.6619 46.324C69.6619 48.876 69.1979 51.3893 68.2699 53.864C67.4192 56.3387 66.0659 58.62 64.2099 60.708C62.3539 62.796 59.9566 64.536 57.0179 65.928L52.1459 61.404C54.2339 60.708 56.0512 59.7413 57.5979 58.504C59.2219 57.2667 60.5366 55.8747 61.5419 54.328C62.5472 52.7813 63.2046 51.196 63.5139 49.572L63.0499 49.34C62.7406 49.572 62.3539 49.7653 61.8899 49.92C61.4259 50.0747 60.7299 50.152 59.8019 50.152C58.8739 50.152 57.9072 49.8813 56.9019 49.34C55.9739 48.7987 55.1619 48.0253 54.4659 47.02C53.7699 45.9373 53.4219 44.5453 53.4219 42.844C53.4219 41.452 53.7699 40.176 54.4659 39.016C55.1619 37.7787 56.0512 36.812 57.1339 36.116C58.2939 35.42 59.5699 35.072 60.9619 35.072Z"
+              fill="white"></path>
+          </svg>
+          <p class="mb-8">
+            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </p>
+          <h5 class="mb-2">Karolina Winkowska</h5>
+          <h5 class="text-blue-800">@karolinawinkowska</h5>
         </div>
-        <div class="flex md:gap-20 mb-20 flex-wrap lg:flex-nowrap">
-            <img src="/assets/images/about-2.png" class="rounded-full w-full max-w-[424px] h-auto object-contain mx-auto lg:ml-[111px] mb-8 md:mb-0"/>
-            <div  class="text-center lg:text-left">
-                <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8  mx-auto lg:ml-0 hidden md:block">
-                    <rect y="0.5" width="100" height="100" rx="50" fill="#ABCFD1"/>
-                    <rect x="10" y="10.5" width="80" height="80" rx="40" fill="#ABCFD1"/>
-                    <path d="M39.1539 35.072C41.0099 35.072 42.5566 35.5747 43.7939 36.58C45.1086 37.508 46.1139 38.8227 46.8099 40.524C47.5059 42.148 47.8539 44.0813 47.8539 46.324C47.8539 48.876 47.3899 51.3893 46.4619 53.864C45.6112 56.3387 44.2579 58.62 42.4019 60.708C40.5459 62.796 38.1486 64.536 35.2099 65.928L30.3379 61.404C32.4259 60.708 34.2432 59.7413 35.7899 58.504C37.4139 57.2667 38.7286 55.8747 39.7339 54.328C40.7392 52.7813 41.3966 51.196 41.7059 49.572L41.2419 49.34C40.9326 49.572 40.5459 49.7653 40.0819 49.92C39.6179 50.0747 38.9219 50.152 37.9939 50.152C37.0659 50.152 36.0992 49.8813 35.0939 49.34C34.1659 48.7987 33.3539 48.0253 32.6579 47.02C31.9619 45.9373 31.6139 44.5453 31.6139 42.844C31.6139 41.452 31.9619 40.176 32.6579 39.016C33.3539 37.7787 34.2432 36.812 35.3259 36.116C36.4859 35.42 37.7619 35.072 39.1539 35.072ZM60.9619 35.072C62.8179 35.072 64.3646 35.5747 65.6019 36.58C66.9166 37.508 67.9219 38.8227 68.6179 40.524C69.3139 42.148 69.6619 44.0813 69.6619 46.324C69.6619 48.876 69.1979 51.3893 68.2699 53.864C67.4192 56.3387 66.0659 58.62 64.2099 60.708C62.3539 62.796 59.9566 64.536 57.0179 65.928L52.1459 61.404C54.2339 60.708 56.0512 59.7413 57.5979 58.504C59.2219 57.2667 60.5366 55.8747 61.5419 54.328C62.5472 52.7813 63.2046 51.196 63.5139 49.572L63.0499 49.34C62.7406 49.572 62.3539 49.7653 61.8899 49.92C61.4259 50.0747 60.7299 50.152 59.8019 50.152C58.8739 50.152 57.9072 49.8813 56.9019 49.34C55.9739 48.7987 55.1619 48.0253 54.4659 47.02C53.7699 45.9373 53.4219 44.5453 53.4219 42.844C53.4219 41.452 53.7699 40.176 54.4659 39.016C55.1619 37.7787 56.0512 36.812 57.1339 36.116C58.2939 35.42 59.5699 35.072 60.9619 35.072Z" fill="white"/>
-                    </svg>
-                <p class="mb-8">Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
-                    <h5 class="mb-2">Aleksander Lewis -Hughes</h5>
-                    <h5 class="text-blue-800">@le_tranq</h5>
-            </div>
+      </div>
+      <div class="flex md:gap-20 mb-20 flex-wrap lg:flex-nowrap">
+        <svg id="blob-2" viewBox="0 0 200 200" class=" mb-8 md:mb-0 lg:ml-[111px]">
+          <defs>
+            <mask id="blob-mask-2">
+              <path id="mask-path" d="M149.5 100C149.5 127.338 127.338 149.5 100 149.5C72.6619 149.5 50.5 127.338 50.5 100C50.5 72.6619 72.6619 50.5 100 50.5C127.338 50.5 149.5 72.6619 149.5 100Z" fill="#fff" stroke="none" />
+            </mask>
+          </defs>
+          <image
+            width="100%"
+            height="100%"
+            href="/assets/images/about-2.png"
+            mask="url(#blob-mask)"
+          />
+        </svg>
+        <!-- <img
+          src="/assets/images/about-2.png"
+          class="rounded-full w-full max-w-[424px] h-auto object-contain mx-auto lg:ml-[111px] mb-8 md:mb-0"
+        /> -->
+        <div class="text-center lg:text-left">
+          <svg
+            width="100"
+            height="101"
+            viewBox="0 0 100 101"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mb-8 mx-auto lg:ml-0 hidden md:block"
+          >
+            <rect y="0.5" width="100" height="100" rx="50" fill="#ABCFD1"
+            ></rect>
+            <rect x="10" y="10.5" width="80" height="80" rx="40" fill="#ABCFD1"
+            ></rect>
+            <path
+              d="M39.1539 35.072C41.0099 35.072 42.5566 35.5747 43.7939 36.58C45.1086 37.508 46.1139 38.8227 46.8099 40.524C47.5059 42.148 47.8539 44.0813 47.8539 46.324C47.8539 48.876 47.3899 51.3893 46.4619 53.864C45.6112 56.3387 44.2579 58.62 42.4019 60.708C40.5459 62.796 38.1486 64.536 35.2099 65.928L30.3379 61.404C32.4259 60.708 34.2432 59.7413 35.7899 58.504C37.4139 57.2667 38.7286 55.8747 39.7339 54.328C40.7392 52.7813 41.3966 51.196 41.7059 49.572L41.2419 49.34C40.9326 49.572 40.5459 49.7653 40.0819 49.92C39.6179 50.0747 38.9219 50.152 37.9939 50.152C37.0659 50.152 36.0992 49.8813 35.0939 49.34C34.1659 48.7987 33.3539 48.0253 32.6579 47.02C31.9619 45.9373 31.6139 44.5453 31.6139 42.844C31.6139 41.452 31.9619 40.176 32.6579 39.016C33.3539 37.7787 34.2432 36.812 35.3259 36.116C36.4859 35.42 37.7619 35.072 39.1539 35.072ZM60.9619 35.072C62.8179 35.072 64.3646 35.5747 65.6019 36.58C66.9166 37.508 67.9219 38.8227 68.6179 40.524C69.3139 42.148 69.6619 44.0813 69.6619 46.324C69.6619 48.876 69.1979 51.3893 68.2699 53.864C67.4192 56.3387 66.0659 58.62 64.2099 60.708C62.3539 62.796 59.9566 64.536 57.0179 65.928L52.1459 61.404C54.2339 60.708 56.0512 59.7413 57.5979 58.504C59.2219 57.2667 60.5366 55.8747 61.5419 54.328C62.5472 52.7813 63.2046 51.196 63.5139 49.572L63.0499 49.34C62.7406 49.572 62.3539 49.7653 61.8899 49.92C61.4259 50.0747 60.7299 50.152 59.8019 50.152C58.8739 50.152 57.9072 49.8813 56.9019 49.34C55.9739 48.7987 55.1619 48.0253 54.4659 47.02C53.7699 45.9373 53.4219 44.5453 53.4219 42.844C53.4219 41.452 53.7699 40.176 54.4659 39.016C55.1619 37.7787 56.0512 36.812 57.1339 36.116C58.2939 35.42 59.5699 35.072 60.9619 35.072Z"
+              fill="white"></path>
+          </svg>
+          <p class="mb-8">
+            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </p>
+          <h5 class="mb-2">Aleksander Lewis -Hughes</h5>
+          <h5 class="text-blue-800">@le_tranq</h5>
         </div>
+      </div>
     </div>
   </section>
   <section class="py-20 bg-white">
     <div class="wrapper container">
-        <ul class="flex mb-4 gap-4 w-full flex-wrap md:flex-nowrap">
-            <li class="flex-grow"><img src="/assets/images/product-galery-1.png" class="object-cover max-h-full min-w-full"/></li>
-            <li class="flex-grow">  <img src="/assets/images/product-galery-2.png" class="object-cover max-h-full min-w-full"/></li>
-        </ul>
-        <div class="grid md:grid-cols-3 gap-4">
-            <img src="/assets/images/product-galery-3.png" class="row-span-2 "/>
-            <img src="/assets/images/product-galery-4.png"/>
-            <img src="/assets/images/product-galery-5.png"/>
-            <img src="/assets/images/product-galery-6.png"/>
-            <img src="/assets/images/product-galery-5.png"/>
-        </div>
+      <ul class="flex mb-4 gap-4 w-full flex-wrap md:flex-nowrap">
+        <li class="flex-grow">
+          <img
+            src="/assets/images/product-galery-1.png"
+            class="object-cover max-h-full min-w-full"
+          />
+        </li>
+        <li class="flex-grow">
+          <img
+            src="/assets/images/product-galery-2.png"
+            class="object-cover max-h-full min-w-full"
+          />
+        </li>
+      </ul>
+      <div class="grid md:grid-cols-3 gap-4">
+        <img src="/assets/images/product-galery-3.png" class="row-span-2" />
+        <img src="/assets/images/product-galery-4.png" />
+        <img src="/assets/images/product-galery-5.png" />
+        <img src="/assets/images/product-galery-6.png" />
+        <img src="/assets/images/product-galery-5.png" />
+      </div>
     </div>
   </section>
   <ReviewsSlider />
   <Sponsors />
 </Layout>
-
+<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -94,4 +169,5 @@ import Subscribe from "../components/Subscribe.astro";
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script is:inline src="/assets/js/main.js"></script>
+<script type="module" src="/assets/js/blob.js"></script>
+<script is:inline  src="/assets/js/main.js"></script>

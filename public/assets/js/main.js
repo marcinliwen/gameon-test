@@ -40,10 +40,10 @@ window.onload = () => {
         //direction: "vertical",
       },
     },
-    speed: 1000,
+  /*   speed: 1000,
     autoplay: {
       delay: 4000,
-    },
+    }, */
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
@@ -274,28 +274,29 @@ window.onload = () => {
   }
 
   /**
-   * play video 
+   * play video
    */
-  var playButton = document.querySelector('#play_button');
-  if(playButton){
-    playButton.addEventListener('click', function(){
-      let video = document.querySelector('#video');
+  var playButton = document.querySelector("#play_button");
+  if (playButton) {
+    playButton.addEventListener("click", function () {
+      let video = document.querySelector("#video");
       video.play();
       video.setAttribute("controls", "");
       this.style.display = "none";
-    })
+    });
   }
-/**
+  /**
    * custom select
    */
-const options = document.querySelectorAll(".custom-select li");
-const selectInput = document.querySelector(".custom-select input");
-options.forEach((item) => {
-  item.addEventListener("click", () => {
-    selectInput.setAttribute("value", item.dataset.value);
+  const options = document.querySelectorAll(".custom-select li");
+  const selectInput = document.querySelector(".custom-select input");
+  options.forEach((item) => {
+    item.addEventListener("click", () => {
+      selectInput.setAttribute("value", item.dataset.value);
+    });
   });
-});
 
+ 
 };
 
 /** add 0 befor digit */
