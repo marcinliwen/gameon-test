@@ -40,10 +40,10 @@ window.onload = () => {
         //direction: "vertical",
       },
     },
-  /*   speed: 1000,
+  speed: 1000,
     autoplay: {
       delay: 4000,
-    }, */
+    },
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
@@ -171,10 +171,27 @@ window.onload = () => {
   });
   const tabs = document.querySelector(".tabs-buttons .swiper-wrapper");
   const tabContent = new Swiper(".tabs-content", {
+    speed: 1000,
+    autoplay: {
+      delay: 4500,
+    },
     onSlideChangeStart: function (swiper, event) {
       tabs.children[swiper.previousIndex].classList.remove("active");
       tabs.children[swiper.activeIndex].classList.add("active");
     },
+    on:{
+      slideChange: function(swiper){
+        console.log(swiper.activeIndex)
+        tabButtons.slides.forEach(item =>{
+          item.classList.remove('active-tab');
+          item.classList.remove('swiper-slide-active')
+        })
+        tabButtons.slides[swiper.activeIndex].classList.add('active-tab');
+        //tabButtons.slides[swiper.activeIndex].classList.add('swiper-slide-active')
+        tabButtons.slideTo(swiper.activeIndex)
+        console.log(tabButtons.slides); 
+      }
+    }
   });
 
   const tabsNav = document.querySelectorAll(".tab-btn");
@@ -188,19 +205,28 @@ window.onload = () => {
   }
   const tabButtons = new Swiper(".tabs-buttons", {
     slidesPerView: "auto",
-    reeMode: true,
+    speed: 1000,
+    freeMode: true,
     // scrollbar: '.swiper-scrollbar',
+    breakpoints: {
+      760: {
+        slidesPerView: 2,
+      },
+      1024: { slidesPerView: "auto" },
+    },
+
+    
     mousewheelControl: true,
     on: {
       click: function (swiper, event) {
         event.stopPropagation();
-        console.log("tap", swiper.clickedIndex);
-        console.log("target", event);
+        //console.log("tap", swiper.clickedIndex);
+        //console.log("target", event);
         if (
           event.target.classList.contains("swiper-slide") &&
           !event.target.classList.contains("active-tab")
         ) {
-          console.log("event go");
+          //console.log("event go");
           event.target.parentElement
             .querySelector(".active-tab")
             .classList.remove("active-tab");
