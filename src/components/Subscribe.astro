@@ -1,19 +1,29 @@
 ---
-import Input from '../components/Input.astro';
+import Input from "../components/Input.astro";
 ---
 
-<section class="bg-gray-100 py-11">
-    <div class="container max-w-[868px] mx-auto">
-        <div class="text-center text-black mb-16">
-            <h2 class="h1 uppercase mb-4">suscribe to our mailing list</h2>
-            <h4>
-                we send awesome newletter with tips and tricks on taking you kiteboarding to the next level
-            </h4>
-          </div>
-          <form class="max-w-[594px] mx-auto">
-            <Input type="text" name="name" placeholder="Name"  className="mb-6"/>
-            <Input type="mail" name="mail" placeholder="E-mail" className="mb-12 "/>
-            <button type="button" class="btn dark full mx-auto btn-text">Subscribe</button>
-          </form>
+<section class="bg-gray-100 pb-28 pt-11 md:py-11">
+  <div class="container wrapper">
+    <div class="max-w-[868px] mx-auto">
+      <div class="text-center text-black mb-16">
+        <h2 class="h1 uppercase mb-4">suscribe to our mailing list</h2>
+        <h4>
+          we send awesome newletter with tips and tricks on taking you
+          kiteboarding to the next level
+        </h4>
+      </div>
+      <form class="max-w-[594px] mx-auto">
+        <Input type="text" name="name" placeholder="Name" className="mb-6" />
+        <Input
+          type="mail"
+          name="mail"
+          placeholder="E-mail"
+          className="mb-12 "
+        />
+        <button type="button" class="btn dark full mx-auto btn-text"
+          >Subscribe</button
+        >
+      </form>
     </div>
+  </div>
 </section>
