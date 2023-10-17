@@ -169,6 +169,15 @@ window.onload = () => {
       delay: 4000,
     }, */
   });
+  const aboutusSwiper = new Swiper(".aboutus-swiper", {
+    slidesPerView: 1,
+    effect: 'fade',
+    crossFade: true,
+    speed: 1500,
+    autoplay: {
+      delay: 3000,
+    }, 
+  });
   const tabs = document.querySelector(".tabs-buttons .swiper-wrapper");
   const tabContent = new Swiper(".tabs-content", {
     speed: 1000,

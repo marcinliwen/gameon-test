@@ -1,7 +1,7 @@
 <section class="pt-11 bg-gray-100">
   <div class="container wrapper">
-    <div class="flex">
-      <div class="max-w-[537px] pb-[376px] items-end">
+    <div class="md:flex">
+      <div class="max-w-[537px] pb-16 md:pb-[376px] items-end">
         <h2 class="mb-[108px]">
           Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           vulputate libero et velit interdum, ac aliquet odio mattis. Class
@@ -17,9 +17,9 @@
           inceptos himenaeos. Curabitur tempus urna at turpis condimentum
           lobortis.
         </p>
-        <a class="btn primary full btn-text">Get to know us</a>
+        <a href="/about" class="btn primary full btn-text">Get to know us</a>
       </div>
-      <div class="ml-auto relative  flex">
+      <div class="ml-auto relative  md:flex">
         <div class="mb-[-77px] mt-auto ">
           <svg
             width="227"
@@ -27,7 +27,7 @@
             viewBox="0 0 227 287"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="absolute bottom-0 right-full"
+            class="hidden md:block absolute bottom-0 right-full"
           >
             <path
               d="M57.7562 63.8914C55.0792 64.5686 53.245 65.58 51.5893 67.2642C48.8149 70.0186 48.6311 71.859 50.4344 79.2255C51.8317 84.9286 51.9582 87.8768 51.0631 93.8469C50.4987 97.5733 50.4534 98.7315 50.8453 99.9167C52.5852 105.131 63.5968 107.36 68.879 103.575C71.1315 101.953 71.9026 99.8552 72.1487 94.7419C72.3122 90.8677 72.8999 86.5821 73.6534 83.8873C73.8339 83.2836 73.475 83.2144 69.5521 83.3299C67.2142 83.3987 64.6025 83.5953 63.8135 83.7382C62.2763 84.0627 62.2018 84.2244 61.8025 86.8291L61.6094 88.3506L64.0265 88.2794C65.5323 88.2351 66.4087 88.3689 66.4181 88.6877C66.4427 89.5247 65.3927 95.619 65.027 96.6669C64.5145 98.118 62.7583 99.0872 60.4997 99.1537C58.9147 99.2004 58.3541 99.0174 57.5777 98.2425L56.6382 97.3128L57.5555 92.1C58.6393 85.8053 58.5475 81.3402 57.3227 76.1107C56.4619 72.4661 56.4572 72.3067 57.1423 71.3292C58.5474 69.2135 62.2325 69.105 64.7899 71.104C66.17 72.1803 66.7157 73.2014 67.3898 75.8941C67.6605 77.0031 67.7001 77.0019 71.0286 76.9039L74.3967 76.8047L74.3498 75.2105C74.2911 73.2177 73.4819 71.3268 71.6272 68.9481C68.2465 64.5798 62.7941 62.5863 57.7562 63.8914Z"
@@ -117,7 +117,17 @@
               d="M10.8051 49.2907L10.6482 49.7337L8.67126 49.8106L7.73327 52.4417L9.21521 53.7527L9.05725 54.1956L4.32922 50.0236L4.50525 49.5307L10.8051 49.2907ZM7.40527 52.1537L8.2362 49.8237L4.82825 49.9237L7.40527 52.1537Z"
               fill="black"></path>
           </svg>
-          <img src="/assets/images/aboutus.png" />
+          <div class="swiper aboutus-swiper w-full max-w-[537px] ml-auto">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/assets/images/aboutus.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/aboutus-2.png" />
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
