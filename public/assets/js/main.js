@@ -332,6 +332,35 @@ window.onload = () => {
     });
   });
 
+  /**
+   * Intersection Observer
+   */
+  let observerOptions = {
+    threshold: 0.25,
+  };
+  let callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio >= 0.1) {
+        //add delay to target
+        if(entry.target.getAttribute('data-delay')){
+          entry.target.style.transitionDelay = entry.target.getAttribute('data-delay')+'ms';
+        }
+        entry.target.classList.add("is_visible");
+      } else {
+        entry.target.classList.remove("is_visible");
+      }
+      if (entry.isIntersecting) {
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  let observer = new IntersectionObserver(callback, observerOptions);
+  const inViews = document.querySelectorAll(".inView");
+  if (inViews.length > 0) {
+    inViews.forEach((inView) => {
+      observer.observe(inView);
+    });
+  }
  
 };
 
