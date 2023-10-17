@@ -42,7 +42,7 @@ window.onload = () => {
     },
   speed: 1000,
     autoplay: {
-      delay: 4000,
+      delay: 10000,
     },
   });
 

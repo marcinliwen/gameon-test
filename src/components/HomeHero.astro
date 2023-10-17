@@ -2,19 +2,29 @@
   <div class="swiper home-swiper h-full relative !z-20">
     <div class="swiper-wrapper h-full">
       {
-        [1, 2, 3].map((item) => {
+        [1, 2, 3, 4].map((item) => {
           return (
             <div class="swiper-slide relative md:mt-0 h-full ">
               <div class=" relative  z-20 h-full  home-hero-gradient">
                 <div class="container wrapper flex items-center h-full relative z-30 ">
                   <div class="lg:max-w-[620px] lg:pr-0 lg:mt-[90px] h-full py-[100px] flex flex-col md:justify-center">
-                    <h1 class="text-white mb-4" data-swiper-parallax="-300">JOIN THE NEXT KITE CLINIC!</h1>
-                    <p class="text-xl text-white font-normal flex items-center gap-8" data-swiper-parallax="-400">
+                    <h1 class="text-white mb-4" data-swiper-parallax="-300">
+                      JOIN THE NEXT KITE CLINIC!
+                    </h1>
+                    <p
+                      class="text-xl text-white font-normal flex items-center gap-8"
+                      data-swiper-parallax="-400"
+                    >
                       <span>Sardinian July 2023</span>
                       <span class="h-[1px] w-[90px] md:w-[107px] bg-white" />
                     </p>
-                    <div class="mt-auto md:mt-[232px] lg:mt-[72px] grid md:flex gap-4 " data-swiper-parallax="-600">
-                      <a class="btn btn-text secondary full has-wave"><span>Join now!</span> <div class="wave"></div></a>
+                    <div
+                      class="mt-auto md:mt-[232px] lg:mt-[72px] grid md:flex gap-4 "
+                      data-swiper-parallax="-600"
+                    >
+                      <a class="btn btn-text secondary full has-wave">
+                        <span>Join now!</span> <div class="wave" />
+                      </a>
                       <a class="btn btn-text secondary outlined">
                         Watch me first
                       </a>
@@ -22,11 +32,17 @@
                   </div>
                 </div>
               </div>
-              <img
-                src="/assets/images/home-hero.png"
-                class="w-full h-full  top-0 left-0 absolute object-cover inset-0 z-10 "
-              />
              
+              <video
+                autoplay="true"
+                playsinline=""
+                loop=""
+                controlslist="nodownload"
+                //poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg"
+                src={`/assets/video/home-${item}.mov`}
+                class="w-full h-full  top-0 left-0 absolute object-cover inset-0 z-10 "
+                muted=""
+              />
             </div>
           );
         })
