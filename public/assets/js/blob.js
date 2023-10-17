@@ -6,7 +6,9 @@ import {
 
   const circlePath = document.getElementById("mask-path");
 
-  function createLiquidPath(path, options,) {
+  const circlePath2 = document.getElementById("mask-path-2");
+
+  function createLiquidPath(path, options) {
     const svgPoints = pointsInPath(path, options.detail);
     const originPoints = svgPoints.map(({ x, y }) => ({ x, y }));
     const liquidPoints = svgPoints.map(({ x, y }) => ({ x, y }));
@@ -90,7 +92,7 @@ import {
   
   if (prefersReducedMotionQuery && !prefersReducedMotionQuery.matches) {
     createLiquidPath(circlePath, {
-      detail: 20,
+      detail: 16,
       tension: 1,
       close: true,
       range: {
@@ -99,5 +101,14 @@ import {
       },
       axis: ["x", "y"]
     });
-    
+    createLiquidPath(circlePath2, {
+        detail: 18,
+        tension: 1,
+        close: true,
+        range: {
+          x: 20,
+          y: 20
+        },
+        axis: ["x", "y"]
+      });
   }
