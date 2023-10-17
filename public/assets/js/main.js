@@ -83,10 +83,14 @@ window.onload = () => {
       1024: { slidesPerView: 3 },
     },
     speed: 1000,
-    /* autoplay: {
-      delay: 4000,
-    }, */
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+    
+    }, 
   });
+  
   const coursesSwiper = new Swiper(".courses-swiper", {
     slidesPerView: 1,
     spaceBetween: 32,
@@ -190,7 +194,6 @@ window.onload = () => {
     },
     on:{
       slideChange: function(swiper){
-        console.log(swiper.activeIndex)
         tabButtons.slides.forEach(item =>{
           item.classList.remove('active-tab');
           item.classList.remove('swiper-slide-active')
@@ -198,7 +201,6 @@ window.onload = () => {
         tabButtons.slides[swiper.activeIndex].classList.add('active-tab');
         //tabButtons.slides[swiper.activeIndex].classList.add('swiper-slide-active')
         tabButtons.slideTo(swiper.activeIndex)
-        console.log(tabButtons.slides); 
       }
     }
   });
@@ -208,7 +210,6 @@ window.onload = () => {
     tabsNav.forEach((tab) => {
       tab.addEventListener("click", (e, index) => {
         e.stopPropagation();
-        console.log(e, " ", index);
       });
     });
   }
