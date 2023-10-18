@@ -801,10 +801,12 @@ a:active .wave-white  {
   .path-line {
     stroke-dasharray: 200;
     stroke-dashoffset: 0;
+    opacity: 0;
    
   }
   .is_visible .path-line{
-    animation: dash 1s linear;
+    animation: dash 1s linear; 
+    opacity: 1;
   }
   @keyframes dash {
     from {
@@ -812,6 +814,7 @@ a:active .wave-white  {
       }
       to {
         stroke-dashoffset: 0;
+
       }
   }
 
