@@ -361,7 +361,7 @@ window.onload = () => {
       observer.observe(inView);
     });
   }
- 
+
 };
 
 /** add 0 befor digit */

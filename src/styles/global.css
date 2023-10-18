@@ -799,7 +799,7 @@ a:active .wave-white  {
     }
   }
   .path-line {
-    stroke-dasharray: 200;
+    stroke-dasharray: 300;
     stroke-dashoffset: 0;
     opacity: 0;
    
@@ -810,7 +810,7 @@ a:active .wave-white  {
   }
   @keyframes dash {
     from {
-        stroke-dashoffset: 200;
+        stroke-dashoffset: 300;
       }
       to {
         stroke-dashoffset: 0;
@@ -827,3 +827,4 @@ a:active .wave-white  {
   .is_visible.fadeIn{
     opacity: 1;
   }
+  
