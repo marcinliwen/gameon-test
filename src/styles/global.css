@@ -827,4 +827,19 @@ a:active .wave-white  {
   .is_visible.fadeIn{
     opacity: 1;
   }
-  
+  @keyframes wobb {
+    0%, 100%   {transform: translateY(0px)}
+    25%  {transform: translateY(-4px)}
+    75%  {transform: translateY(4px)}
+  }
+  .wobble{
+    overflow: visible;
+  }
+  .wobble path {
+    animation-name: wobb;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 800ms;
+    display: inline-block;
+    transform: translateY(0px);
+  }

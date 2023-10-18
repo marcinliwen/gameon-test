@@ -362,6 +362,23 @@ window.onload = () => {
     });
   }
 
+  const isWobbling = document.querySelector('.is_wobbling');
+  if(isWobbling){
+    setInterval(function(){
+      isWobbling.classList.add('wobble');
+      const wobble = document.querySelectorAll('.wobble path');
+    if(wobble){
+      wobble.forEach((item, index)=>{
+        item.style.animationDelay = (index + 1) * 50 +'ms';
+      })
+    }
+    setTimeout(function(){
+      isWobbling.classList.remove('wobble')
+    }, 3000)
+    }, 10000);
+  }
+  
+  
 };
 
 /** add 0 befor digit */
