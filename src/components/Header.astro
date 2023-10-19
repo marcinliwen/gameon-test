@@ -149,7 +149,7 @@ const currentPath = pathname.slice(1)
     </div>
   </nav>
   <nav class="pt-8 md:pt-10 nav-bottom">
-    <div class="container wrapper grid grid-cols-2">
+    <div class="container wrapper grid md:flex justify-between items-center lg:grid grid-cols-2">
       <div class="logo">
         {
           isHome ? (
@@ -242,7 +242,7 @@ const currentPath = pathname.slice(1)
               height="50"
               viewBox="0 0 152 50"
               fill="none"
-              class={` ${textdark ? "text-blue-800" : "text-white " } ${logoWhite ? '':'lg:text-blue-800'} w-20 md:w-[152px] h-auto `}
+              class={` ${textdark ? "text-blue-800" : "text-white " } ${logoWhite ? '':'lg:text-blue-800'} w-20 md:w-[152px] h-auto is_wobbling`}
             >
               <path
                 d="M2.64969 42.1997V49.1374H1.48049V42.1997H2.64969ZM6.14779 42.1997L3.81409 45.5495L2.41389 47.2505L2.19259 46.0402L3.15969 44.6203L4.73309 42.1997H6.14779ZM4.86309 49.1374L3.08759 45.8592L3.89109 45.0348L6.24399 49.1374H4.86309Z"
@@ -322,7 +322,7 @@ const currentPath = pathname.slice(1)
         }
       </div>
       <div
-        class={`nav-links menu-text flex items-start justify-end md:pl-8 lg:pl-0 ${
+        class={`nav-links menu-text flex items-start justify-end md:pl-1 lg:pl-0 ${
           textdark ? "text-blue-800" : "text-white"
         }`}
       >
@@ -354,11 +354,11 @@ const currentPath = pathname.slice(1)
               </defs>
             </svg></button
           >
-          <ul class="md:flex items-center md:gap-8 lg:gap-[72px]">
+          <ul class="md:flex items-center md:gap-4  xl:gap-10">
             <li>
               <a
               href="/yoga-&-training"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'yoga-&-training' ? 'active' :''}  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 md:gap-[12px] lg:gap-1  xl:gap-4 cursor-pointer ${currentPath === 'yoga-&-training' ? 'active' :''}  ${
                   textdark
                     ? ""
                     : ""
@@ -402,7 +402,7 @@ const currentPath = pathname.slice(1)
             <li>
               <a
               href="/kiteboard-clinics"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'kiteboard-clinics' ? 'active':''}  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 md:gap-[12px] lg:gap-1  xl:gap-4 cursor-pointer ${currentPath === 'kiteboard-clinics' ? 'active':''}  ${
                   textdark
                     ? ""
                     : ""
@@ -468,7 +468,7 @@ const currentPath = pathname.slice(1)
             <li>
               <a
               href="/tips-&-tricks"
-                class={`flex items-center justify-center py-4 md:py-0 gap-4 cursor-pointer ${currentPath === 'tips-&-tricks' ? 'active' :''}  ${
+                class={`flex items-center justify-center py-4 md:py-0 gap-4 md:gap-[12px] lg:gap-1  xl:gap-4 cursor-pointer ${currentPath === 'tips-&-tricks' ? 'active' :''}  ${
                   textdark
                     ? ""
                     : ""

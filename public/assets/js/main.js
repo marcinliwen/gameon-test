@@ -374,8 +374,8 @@ window.onload = () => {
     }
     setTimeout(function(){
       isWobbling.classList.remove('wobble')
-    }, 3000)
-    }, 10000);
+    }, 2000)
+    }, 8000);
   }
   
   

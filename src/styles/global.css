@@ -829,8 +829,8 @@ a:active .wave-white  {
   }
   @keyframes wobb {
     0%, 100%   {transform: translateY(0px)}
-    25%  {transform: translateY(-4px)}
-    75%  {transform: translateY(4px)}
+    25%  {transform: translateY(-3px)}
+    75%  {transform: translateY(3px)}
   }
   .wobble{
     overflow: visible;
@@ -839,7 +839,7 @@ a:active .wave-white  {
     animation-name: wobb;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 800ms;
+    animation-duration: 400ms;
     display: inline-block;
     transform: translateY(0px);
   }
