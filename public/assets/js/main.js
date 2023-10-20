@@ -376,7 +376,9 @@ window.onload = () => {
       }, 2000);
     }, 8000);
   }
-
+/**
+ * video with custom controls
+ */
   const supportsVideo = !!document.createElement("video").canPlayType;
   if (supportsVideo) {
     const customVideo = document.getElementById("custom-video");
@@ -404,9 +406,7 @@ window.onload = () => {
         }
       });
       video.addEventListener("timeupdate", () => {
-        /* if (!progress.getAttribute("max"))
-    progress.setAttribute("max", video.duration);
-  progress.value = video.currentTime; */
+        
         progressBar.style.width = `${Math.floor(
           (video.currentTime * 100) / video.duration
         )}%`;
@@ -419,6 +419,21 @@ window.onload = () => {
       });
     }
   }
+
+  /**
+   * scroll to top
+   */
+  const scrollToTpp = document.getElementById('scroll-to-top');
+  if(scrollToTpp){
+    scrollToTpp.addEventListener('click',()=>{
+      window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+      });
+    })
+  }
+ 
 };
 
 /** add 0 befor digit */
