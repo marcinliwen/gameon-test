@@ -40,7 +40,7 @@ window.onload = () => {
         //direction: "vertical",
       },
     },
-  speed: 1000,
+    speed: 1000,
     autoplay: {
       delay: 10000,
     },
@@ -86,11 +86,10 @@ window.onload = () => {
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-    
-    }, 
+      pauseOnMouseEnter: true,
+    },
   });
-  
+
   const coursesSwiper = new Swiper(".courses-swiper", {
     slidesPerView: 1,
     spaceBetween: 32,
@@ -175,12 +174,12 @@ window.onload = () => {
   });
   const aboutusSwiper = new Swiper(".aboutus-swiper", {
     slidesPerView: 1,
-    effect: 'fade',
+    effect: "fade",
     crossFade: true,
     speed: 1500,
     autoplay: {
       delay: 3000,
-    }, 
+    },
   });
   const tabs = document.querySelector(".tabs-buttons .swiper-wrapper");
   const tabContent = new Swiper(".tabs-content", {
@@ -192,17 +191,17 @@ window.onload = () => {
       tabs.children[swiper.previousIndex].classList.remove("active");
       tabs.children[swiper.activeIndex].classList.add("active");
     },
-    on:{
-      slideChange: function(swiper){
-        tabButtons.slides.forEach(item =>{
-          item.classList.remove('active-tab');
-          item.classList.remove('swiper-slide-active')
-        })
-        tabButtons.slides[swiper.activeIndex].classList.add('active-tab');
+    on: {
+      slideChange: function (swiper) {
+        tabButtons.slides.forEach((item) => {
+          item.classList.remove("active-tab");
+          item.classList.remove("swiper-slide-active");
+        });
+        tabButtons.slides[swiper.activeIndex].classList.add("active-tab");
         //tabButtons.slides[swiper.activeIndex].classList.add('swiper-slide-active')
-        tabButtons.slideTo(swiper.activeIndex)
-      }
-    }
+        tabButtons.slideTo(swiper.activeIndex);
+      },
+    },
   });
 
   const tabsNav = document.querySelectorAll(".tab-btn");
@@ -225,7 +224,6 @@ window.onload = () => {
       1024: { slidesPerView: "auto" },
     },
 
-    
     mousewheelControl: true,
     on: {
       click: function (swiper, event) {
@@ -342,8 +340,9 @@ window.onload = () => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio >= 0.1) {
         //add delay to target
-        if(entry.target.getAttribute('data-delay')){
-          entry.target.style.transitionDelay = entry.target.getAttribute('data-delay')+'ms';
+        if (entry.target.getAttribute("data-delay")) {
+          entry.target.style.transitionDelay =
+            entry.target.getAttribute("data-delay") + "ms";
         }
         entry.target.classList.add("is_visible");
       } else {
@@ -362,23 +361,64 @@ window.onload = () => {
     });
   }
 
-  const isWobbling = document.querySelector('.is_wobbling');
-  if(isWobbling){
-    setInterval(function(){
-      isWobbling.classList.add('wobble');
-      const wobble = document.querySelectorAll('.wobble path');
-    if(wobble){
-      wobble.forEach((item, index)=>{
-        item.style.animationDelay = (index + 1) * 50 +'ms';
-      })
-    }
-    setTimeout(function(){
-      isWobbling.classList.remove('wobble')
-    }, 2000)
+  const isWobbling = document.querySelector(".is_wobbling");
+  if (isWobbling) {
+    setInterval(function () {
+      isWobbling.classList.add("wobble");
+      const wobble = document.querySelectorAll(".wobble path");
+      if (wobble) {
+        wobble.forEach((item, index) => {
+          item.style.animationDelay = (index + 1) * 50 + "ms";
+        });
+      }
+      setTimeout(function () {
+        isWobbling.classList.remove("wobble");
+      }, 2000);
     }, 8000);
   }
-  
-  
+
+  const supportsVideo = !!document.createElement("video").canPlayType;
+  if (supportsVideo) {
+    const customVideo = document.getElementById("custom-video");
+    if (customVideo) {
+      const videoContainer = document.getElementById("videoContainer");
+      const video = document.getElementById("video");
+      const videoControls = document.getElementById("video-controls");
+      // Hide the default controls
+      video.controls = false;
+
+      // Display the user defined video controls
+      videoControls.style.opacity = "1";
+      const playpause = document.getElementById("playpause");
+      const progress = document.getElementById("progress");
+      const progressBar = document.getElementById("progress-bar");
+      playpause.addEventListener("click", (e) => {
+        if (video.paused || video.ended) {
+          video.play();
+          playpause.querySelector(".play").classList.add("hidden");
+          playpause.querySelector(".pause").classList.remove("hidden");
+        } else {
+          video.pause();
+          playpause.querySelector(".play").classList.remove("hidden");
+          playpause.querySelector(".pause").classList.add("hidden");
+        }
+      });
+      video.addEventListener("timeupdate", () => {
+        /* if (!progress.getAttribute("max"))
+    progress.setAttribute("max", video.duration);
+  progress.value = video.currentTime; */
+        progressBar.style.width = `${Math.floor(
+          (video.currentTime * 100) / video.duration
+        )}%`;
+      });
+      progress.addEventListener("click", (e) => {
+        console.log("click");
+        const rect = progress.getBoundingClientRect();
+        const pos = (e.pageX - rect.left) / progress.offsetWidth;
+        video.currentTime = pos * video.duration;
+      });
+    }
+  }
 };
 
 /** add 0 befor digit */

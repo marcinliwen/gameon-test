@@ -28,17 +28,62 @@ import RotationCircle from "../components/RotationCircle.astro";
             ><span>Join now</span><div class="wave-white"></div></a
           >
           <RotationCircle />
-         
         </div>
       </div>
     </div>
     <div
-      class="hero-cover absolute right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full lg:w-1/2 md:rounded-tl-[48px] overflow-hidden"
+      class="absolute right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full lg:w-1/2 md:rounded-tl-[48px]"
     >
-      <img
-        src="/assets/images/hero-1.png"
-        class="relative w-full h-full object-cover"
-      />
+      <figure
+        id="custom-video"
+        class="relative w-full h-full object-cover md:rounded-tl-[48px]"
+      >
+        <video
+          id="video"
+          autoplay="true"
+          playsinline=""
+          loop=""
+          controlslist="play timeline volume"
+          controls
+          poster=""
+          src={`/assets/video/home-4.mov`}
+          class="relative w-full h-full object-cover md:rounded-tl-[48px]"
+          muted=""></video>
+        <div class="hero-cover absolute inset-0 z-10"></div>
+        <ul
+          id="video-controls"
+          class="controls absolute w-full left-0 right-0 bottom-20 md:bottom-8 flex opacity-0 items-center gap-5 px-8 z-30"
+        >
+          <li class="h-[22px]">
+            <button id="playpause" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="22"
+                viewBox="0 0 18 22"
+                fill="none"
+                class="play hidden"
+              >
+                <path
+                  d="M18 11L-9.78799e-07 21.3923L-7.02746e-08 0.607695L18 11Z"
+                  fill="white"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22" fill="none" class="pause">
+                <path d="M0 0H6V22H0V0Z" fill="white"/>
+                <path d="M12 0H18V22H12V0Z" fill="white"/>
+              </svg>
+            </button>
+          </li>
+          <li id="progress" class="progress relative w-full h-5 grid items-center cursor-pointer">
+            <div class="bg-white/50 w-full h-[1px] relative">
+              <span
+                id="progress-bar"
+                class="bg-white h-[3px] block top-[-1px] relative"
+              ></span>
+            </div>
+          </li>
+        </ul>
+      </figure>
     </div>
   </section>
   <ClassesSlider />
