@@ -152,32 +152,66 @@ import Subscribe from "../components/Subscribe.astro";
   </section>
   <section class="py-20 bg-white">
     <div class="wrapper container">
-      <ul class="flex mb-4 gap-4 w-full flex-wrap md:flex-nowrap">
-        <li class="flex-grow">
+      <div class="grid md:grid-cols-6 gap-4 " id="product-gallery">
+        <a
+        data-lg-size="759-540"
+         href="/assets/images/product-galery-1.png" class="col-span-4">
           <img
             src="/assets/images/product-galery-1.png"
-            class="object-cover max-h-full min-w-full"
+            class="w-full h-full object-cover"
           />
-        </li>
-        <li class="flex-grow">
+        </a>
+        <a 
+        data-lg-size="1013-570"
+        class="col-span-2"
+        data-video='{"source": [{"src":"/assets/video/home-2.mov", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+        data-poster=""
+        >
           <img
             src="/assets/images/product-galery-2.png"
-            class="object-cover max-h-full min-w-full"
+            class="w-full h-full object-cover"
           />
-        </li>
-      </ul>
-      <div class="grid md:grid-cols-3 gap-4">
-        <img src="/assets/images/product-galery-3.png" class="row-span-2" />
-        <img src="/assets/images/product-galery-4.png" />
-        <img src="/assets/images/product-galery-5.png" />
-        <img src="/assets/images/product-galery-6.png" />
-        <img src="/assets/images/product-galery-5.png" />
+        </a>
+        <a
+        data-lg-size="428-616"
+          href="/assets/images/product-galery-3.png"
+          class="col-span-2 row-span-4"
+        >
+          <img src="/assets/images/product-galery-3.png" />
+        </a>
+        <a data-lg-size="428-300" href="/assets/images/product-galery-4.png" class="col-span-2">
+          <img src="/assets/images/product-galery-4.png" />
+        </a>
+        <a data-lg-size="428-300" href="/assets/images/product-galery-5.png" class="col-span-2">
+          <img src="/assets/images/product-galery-5.png" />
+        </a>
+        <a data-lg-size="428-300" href="/assets/images/product-galery-6.png" class="col-span-2">
+          <img src="/assets/images/product-galery-6.png" />
+        </a>
+        <a data-lg-size="428-300" href="/assets/images/product-galery-5.png" class="col-span-2">
+          <img src="/assets/images/product-galery-5.png" />
+        </a>
+      
       </div>
     </div>
   </section>
   <ReviewsSlider />
   <Sponsors />
 </Layout>
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js
+"
+></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/pager/lg-pager.min.js" integrity="sha512-p/vQczdCk287Uzj8GS8480KbjCQ8MGzRrXoQ/XFJhySSxWlRzWfgmVk0bjsixwgvLlfddccXMo/sKLpSBONTzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script   is:inline
+src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/video/lg-video.min.js" integrity="sha512-Eo7d/1I/2Yywxw/unjfX06Q+owD82+3ign70yHtNTajId+C3CcHeqb+XP/a+uq/Fhrrkf8MeBcBiZqoMASFiiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-video.min.css" integrity="sha512-89gDQOHnYjji90NPJ7+M5tgA/0E+fjL4KuSFhi6tjH6sZ54yUEogPMmOAgbI599fW1CtCyrsJbch8k/QzuoXzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script   
+is:inline
+ src="/assets/js/gallery.js"></script>
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>

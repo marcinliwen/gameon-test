@@ -77,16 +77,35 @@ import Subscribe from "../components/Subscribe.astro";
   </section>
   <section class="bg-blue-800/10 pb-28">
     <div class="container wrapper">
-        <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4 pb-10">
-            <img src="/assets/images/tip-1.png"/>
-            <img src="/assets/images/tip-2.png"/>
-            <img src="/assets/images/tip-3.png"/>
-            <img src="/assets/images/tip-3.png"/>
-            <img src="/assets/images/tip-4.png"/>
-            <img src="/assets/images/tip-1.png"/>
-            <img src="/assets/images/tip-2.png"/>
-            <img src="/assets/images/tip-3.png"/>
-            <img src="/assets/images/tip-4.png"/>
+        <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4 pb-10" id="product-gallery">
+          <a  href="/assets/images/tip-1.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-1.png" />
+          </a>
+          <a  href="/assets/images/tip-2.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-2.png" />
+          </a>
+          <a  href="/assets/images/tip-3.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-3.png" />
+          </a>
+          <a  href="/assets/images/tip-3.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-3.png" />
+          </a>
+          <a  href="/assets/images/tip-4.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-4.png" />
+          </a>
+          <a  href="/assets/images/tip-1.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-1.png" />
+          </a>
+          <a  href="/assets/images/tip-2.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-2.png" />
+          </a>
+          <a  href="/assets/images/tip-3.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-3.png" />
+          </a>
+          <a  href="/assets/images/tip-4.png" data-lg-size="428-300">
+            <img src="/assets/images/tip-4.png" />
+          </a>
+            
         </div>
         <a href="/tips-&-tricks" class="flex gap-6 items-center cursor-pointer "><span class="pl-[5px] py-[6px] pr-[7px] flex w-6 h-6 justify-center items-center bg-blue-200 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M9.20289 0.250976L2.91639 5.81398C2.88987 5.83743 2.86864 5.86626 2.85409 5.89854C2.83955 5.93082 2.83203 5.96582 2.83203 6.00123C2.83203 6.03663 2.83955 6.07163 2.85409 6.10391C2.86864 6.13619 2.88987 6.16502 2.91639 6.18848L9.20289 11.751" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -94,7 +113,16 @@ import Subscribe from "../components/Subscribe.astro";
     </div>
   </section>
 </Layout>
-
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js
+"
+></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script   is:inline
+src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/video/lg-video.min.js" integrity="sha512-Eo7d/1I/2Yywxw/unjfX06Q+owD82+3ign70yHtNTajId+C3CcHeqb+XP/a+uq/Fhrrkf8MeBcBiZqoMASFiiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-video.min.css" integrity="sha512-89gDQOHnYjji90NPJ7+M5tgA/0E+fjL4KuSFhi6tjH6sZ54yUEogPMmOAgbI599fW1CtCyrsJbch8k/QzuoXzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -103,4 +131,7 @@ import Subscribe from "../components/Subscribe.astro";
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script   
+is:inline
+ src="/assets/js/gallery.js"></script>
 <script is:inline src="/assets/js/main.js"></script>
