@@ -1,3 +1,7 @@
+---
+import Button from "./Button.astro";
+---
+
 <section class="relative getCursorPosition left-img home-hero">
   <div class="swiper home-swiper h-full relative !z-20">
     <div class="swiper-wrapper h-full">
@@ -19,21 +23,19 @@
                       <span class="h-[1px] w-[90px] md:w-[107px] bg-white" />
                     </p>
                     <div
-                      class="mt-auto md:mt-[232px] lg:mt-[72px] grid md:flex gap-4 "
+                      class="mt-auto md:mt-[232px] lg:mt-[72px] grid md:flex gap-4  items-center"
                       data-swiper-parallax="-600"
                     >
-                      <a class="btn btn-text secondary full has-wave">
+                      <a class="btn btn-text secondary full has-wave h-[48px]">
                         <span>Join now!</span> <div class="wave" />
                       </a>
-                      <a class="btn btn-text secondary outlined" >
-                        Watch me first
-                      </a>
-                     
+                      <Button href="/" color="primary-outlined" text="Watch me first" />
+                      
                     </div>
                   </div>
                 </div>
               </div>
-             
+
               <video
                 autoplay="true"
                 playsinline=""

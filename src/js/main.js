@@ -21,6 +21,7 @@ window.onload = () => {
   const homeSwiper = new Swiper(".home-swiper", {
     slidesPerView: 1,
     parallax: true,
+    touchStartPreventDefault: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -41,15 +42,16 @@ window.onload = () => {
       },
     },
     speed: 1000,
-    autoplay: {
+   /*  autoplay: {
       delay: 10000,
-    },
+    }, */
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
     //slidesPerView: 3,
     spaceBetween: 16,
     centeredSlides: true,
+    touchStartPreventDefault: false,
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
@@ -94,6 +96,7 @@ window.onload = () => {
     slidesPerView: 1,
     spaceBetween: 32,
     centeredSlides: true,
+    touchStartPreventDefault: false,
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
@@ -135,6 +138,7 @@ window.onload = () => {
     slidesPerView: 1,
     spaceBetween: 32,
     centeredSlides: true,
+    touchStartPreventDefault: false,
     loop: true,
     effect: "coverflow",
     slidesPerView: "auto",
@@ -175,6 +179,7 @@ window.onload = () => {
   const aboutusSwiper = new Swiper(".aboutus-swiper", {
     slidesPerView: 1,
     effect: "fade",
+    touchStartPreventDefault: false,
     crossFade: true,
     speed: 1500,
     autoplay: {
@@ -183,6 +188,7 @@ window.onload = () => {
   });
   const tabs = document.querySelector(".tabs-buttons .swiper-wrapper");
   const tabContent = new Swiper(".tabs-content", {
+    touchStartPreventDefault: false,
     speed: 1000,
     autoplay: {
       delay: 4500,
@@ -434,7 +440,7 @@ window.onload = () => {
     })
   }
 
-  
+ 	
 };
 
 /** add 0 befor digit */

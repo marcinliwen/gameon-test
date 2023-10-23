@@ -11,6 +11,7 @@ import AboutUs from "../components/AboutUs.astro";
 import OfferTab from "../components/OfferTab.astro";
 import Input from "../components/Input.astro";
 import Select from "../components/Select.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Basket | Game On" isHome={false} textdark={true}>
@@ -346,7 +347,8 @@ import Select from "../components/Select.astro";
               </label>
             </div>
           </div>
-          <button onclick="location.href='/confirmation'" type="button" class="btn dark full btn-text mt-16">Place order</button>
+
+          <Button   onclick="location.href='/confirmation'" type="button" text="Place order" color="dark" />
       </div>
       </div>
     </div>
@@ -362,4 +364,4 @@ import Select from "../components/Select.astro";
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script is:inline src="/assets/js/main.js"></script>
+<script src="../js/main.js"></script>

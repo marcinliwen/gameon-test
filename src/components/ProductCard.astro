@@ -1,5 +1,6 @@
 ---
 const {bg}=Astro.props;
+import Button from "./Button.astro";
 ---
 
 <article class={` ${bg ? bg : ""} py-10 px-4 text-center swiper-slide`}>
@@ -8,5 +9,5 @@ const {bg}=Astro.props;
     <p class="mb-4">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti.</p>
     <h5 class="mb-2">Time: 40 min</h5>
     <h5 class="mb-8">Price: 100 EUR</h5>
-    <a href="/product" class="btn dark full mx-auto btn-text">Book now</a>
+    <Button href="/product" text="Book now" color="dark"/>
 </article>

@@ -843,3 +843,140 @@ a:active .wave-white  {
     display: inline-block;
     transform: translateY(0px);
   }
+
+  .button{
+    background: none;
+    border: none;
+    width: max-content;
+    outline: none;
+    position: relative;
+    margin-left: -8px;
+    padding: 15px 66px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .button__text {
+	display: block;
+	/* padding: 10px; */
+	text-align: center;
+	position: relative;
+	z-index: 20;
+    margin-left: -8px;
+
+	font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+	-webkit-touch-callout: none;
+	/* -webkit-user-select: none; */
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	/* user-select: none; */
+}
+
+.morph-shape {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.button__text, .morph-shape svg, .button:hover .button__text, .button:hover .morph-shape svg{
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+.secondary .morph-shape svg {
+    fill: #fff;
+    
+}
+
+.secondary .button__text{
+    color: #373737;
+}
+
+.primary .morph-shape svg {
+    fill: #ABCFD1;
+}
+
+.primary .button__text{
+    color: #373737;
+}
+.primary-outlined .morph-shape svg{
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: transparent;
+}
+.primary-outlined .button__text{
+    color: #fff;
+}
+.dark .morph-shape svg {
+    fill: #3D8F94;
+}
+
+.dark .button__text{
+    color: #fff;
+}
+.primary-transparent .morph-shape svg{
+    fill: #ABCFD1;
+}
+.primary-transparent .button__text{
+    color:#373737;
+}
+.dark-outlined .morph-shape svg{
+    fill: transparent;
+    stroke: #3D8F94;
+    stroke-width: 2px;
+}
+.dark-outlined .button__text{
+    color: #3D8F94;
+}
+@media(min-width:1024px){
+    .primary:hover .morph-shape svg {
+        fill: #373737;
+    }
+    .primary:hover .button__text{
+        color: #ABCFD1;
+    }
+    .primary-outlined:hover .morph-shape svg{
+        fill: #fff;
+    }
+    .primary-outlined:hover .button__text{
+        color: #3D8F94;
+    }
+    .secondary:hover .button__text{
+        color: #fff;
+    }
+    .secondary:hover .morph-shape svg {
+        fill: #373737;
+    }
+    .dark:hover .morph-shape svg {
+        fill: #fff;
+        stroke: #3D8F94;
+        stroke-width: 2px;
+    }
+    .dark:hover .button__text{
+        color: #3D8F94;
+    }
+    .primary-transparent:hover .morph-shape svg{
+        fill: #373737;
+        stroke: #ABCFD1;
+    }
+    .primary-transparent:hover .button__text{
+        color:#ABCFD1;
+    }
+    .dark-outlined:hover .morph-shape svg{
+        fill: #3D8F94;
+        stroke: #3D8F94;
+    }
+    .dark-outlined:hover .button__text{
+        color: #fff;
+    }
+}
