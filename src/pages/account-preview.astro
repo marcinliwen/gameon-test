@@ -11,6 +11,7 @@ import AboutUs from "../components/AboutUs.astro";
 import OfferTab from "../components/OfferTab.astro";
 import Input from "../components/Input.astro";
 import Select from "../components/Select.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Basket | Game On" isHome={false} textdark={true}>
@@ -142,7 +143,8 @@ import Select from "../components/Select.astro";
             aliquet odio . Nunc vulputate libero et velit interdum, ac aliquet
             odio . Nunc vulputate libero et velit interdum, ac aliquet odio .
           </p>
-          <a href="/account-full" class="btn dark full  btn-text">Open product</a>
+<!--           <a href="/account-full" class="btn dark full  btn-text">Open product</a>
+ -->          <Button href="/account-full" color="dark" text="Open product" />
         </div>
       </div>
     </div>

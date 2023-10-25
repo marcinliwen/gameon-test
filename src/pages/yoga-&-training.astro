@@ -8,6 +8,7 @@ import CoursesSlider from "../components/CoursesSlider.astro";
 import ClassesSlider from "../components/ClassesSlider.astro";
 import Subscribe from "../components/Subscribe.astro";
 import RotationCircle from "../components/RotationCircle.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Welcome to Astro." isHome={false}>
@@ -27,6 +28,7 @@ import RotationCircle from "../components/RotationCircle.astro";
           <a class="btn dark full btn-text text-white has-wave-white"
             ><span>Join now</span><div class="wave-white"></div></a
           >
+          <Button text="Join now" color="dark" variant="wave" href="/"/>
           <RotationCircle />
         </div>
       </div>

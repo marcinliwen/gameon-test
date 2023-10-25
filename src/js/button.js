@@ -54,11 +54,9 @@
     };
     
     [].slice.call( document.querySelectorAll( 'button.button--effect-1' ) ).forEach( function( el ) {
-      console.log(el)
       new SVGButton( el );
     } );
     [].slice.call( document.querySelectorAll( 'a.button--effect-1' ) ).forEach( function( el ) {
-        console.log(el)
         new SVGButton( el );
       } );
     

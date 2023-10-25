@@ -924,6 +924,7 @@ a:active .wave-white {
 }
 
 .button {
+    display: block;
     background: none;
     border: none;
     width: max-content;
