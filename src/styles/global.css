@@ -6,12 +6,14 @@
 @layer base {
     html {
         -webkit-tap-highlight-color: transparent;
-        
-      }
-      *{
-        -webkit-appearance:none;
-        -webkit-border-radius:0px;
-      }
+
+    }
+
+    * {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+    }
+
     @font-face {
         font-family: "Work Sans";
         src: url("/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf") format("truetype-variations");
@@ -268,11 +270,6 @@
         transition: all .3s ease-in-out;
     }
 
-    .btn.primary:hover {
-        background: #373737;
-        color: #ABCFD1;
-        border-color: #373737;
-    }
 
     .btn.primary.outlined {
         border: 1px solid #ABCFD1;
@@ -287,10 +284,6 @@
         transition: all .3s ease-in-out;
     }
 
-    .btn.dark:hover {
-        background: #3D8F94;
-        color: #fff;
-    }
 
     .btn.dark.full {
         background: #3D8F94;
@@ -298,10 +291,6 @@
         transition: all .3s ease-in-out;
     }
 
-    .btn.dark.full:hover {
-        color: #3D8F94;
-        background: #fff;
-    }
 
     .btn.secondary.outlined {
         border: 1px solid #fff;
@@ -310,10 +299,7 @@
         transition: all .3s ease-in-out;
     }
 
-    .btn.secondary.outlined:hover {
-        background: #fff;
-        color: #3D8F94;
-    }
+
 
     .btn.secondary.full {
         border: 1px solid #fff;
@@ -322,11 +308,7 @@
         transition: all .3s ease-in-out;
     }
 
-    .btn.secondary.full:hover {
-        background: #373737;
-        color: #fff;
-        border-color: #373737;
-    }
+
     @media(min-width: 768px) {
         .btn {
             width: max-content;
@@ -334,6 +316,34 @@
     }
 
     @media(min-width: 1024px) {
+
+        .btn.primary:hover {
+            background: #373737;
+            color: #ABCFD1;
+            border-color: #373737;
+        }
+
+        .btn.secondary.full:hover {
+            background: #373737;
+            color: #fff;
+            border-color: #373737;
+        }
+
+        .btn.secondary.outlined:hover {
+            background: #fff;
+            color: #3D8F94;
+        }
+
+        .btn.dark.full:hover {
+            color: #3D8F94;
+            background: #fff;
+        }
+
+        .btn.dark:hover {
+            background: #3D8F94;
+            color: #fff;
+        }
+
         .link:after {
             content: "";
             position: absolute;
@@ -696,123 +706,127 @@
         visibility: hidden;
     }
 
-    .toggle-password .open , .toggle-password .close{
+    .toggle-password .open,
+    .toggle-password .close {
         position: absolute;
         right: 0
     }
+
     #password~.toggle-password {
         position: absolute;
         right: 16px;
         top: 20px;
     }
 }
-@layer utilities{
+
+@layer utilities {
     @media(min-width: 1024px) {
         .about-hero-img {
             width: calc(100% - ((100% - 1312px)/2 + 556px));
         }
-    
-    
+
+        .has-wave {
+            overflow: hidden;
+            position: relative;
+            border: none !important;
+        }
+
+        .has-wave span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .has-wave:hover {
+            background: #fff !important;
+            border-color: #3D8F94 !important;
+        }
+
+        .wave {
+            background-color: #3D8F94;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: calc(100% + 22px);
+            transition: top 1s ease;
+            width: 100%;
+
+        }
+
+        .wave:before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='%233D8F94'/%3E%3C/svg%3E");
+            -webkit-animation: wave 0.5s linear infinite;
+            animation: wave 0.5s linear infinite;
+            background-size: contain;
+            height: 22px;
+            left: 0;
+            position: absolute;
+            top: -22px;
+            width: 100%;
+        }
+
+        .has-wave-white {
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .wave-white {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: calc(100% + 22px);
+            transition: top 1s ease;
+            width: 100%;
+            background: #fff;
+
+        }
+
+        .has-wave-white:hover {
+            background-color: #3D8F94 !important;
+        }
+
+        .has-wave-white span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wave-white:before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='white'/%3E%3C/svg%3E");
+            -webkit-animation: wave 0.5s linear infinite;
+            animation: wave 0.5s linear infinite;
+            background-size: contain;
+            height: 22px;
+            left: 0;
+            position: absolute;
+            top: -22px;
+            width: 100%;
+        }
+
+        a:hover .wave,
+        a:focus .wave,
+        a:active .wave,
+        a:hover .wave-white,
+        a:focus .wave-white,
+        a:active .wave-white {
+            top: 0;
+        }
+
     }
-    
+
     .body-overflow {
         overflow: hidden;
     }
-    
-    .has-wave {
-        overflow: hidden;
-        position: relative;
-        border: none !important;
-    }
-    
-    .has-wave span {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .has-wave:hover {
-        background: #fff !important;
-        border-color: #3D8F94 !important;
-    }
-    
-    .wave {
-        background-color: #3D8F94;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: calc(100% + 22px);
-        transition: top 1s ease;
-        width: 100%;
-    
-    }
-    
-    .wave:before {
-        content: "";
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='%233D8F94'/%3E%3C/svg%3E");
-        -webkit-animation: wave 0.5s linear infinite;
-        animation: wave 0.5s linear infinite;
-        background-size: contain;
-        height: 22px;
-        left: 0;
-        position: absolute;
-        top: -22px;
-        width: 100%;
-    }
-    
-    .has-wave-white {
-        overflow: hidden;
-        position: relative;
-    
-    }
-    
-    .wave-white {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: calc(100% + 22px);
-        transition: top 1s ease;
-        width: 100%;
-        background: #fff;
-    
-    }
-    
-    .has-wave-white:hover {
-        background-color: #3D8F94 !important;
-    }
-    
-    .has-wave-white span {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .wave-white:before {
-        content: "";
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='34' viewBox='0 0 190 34' fill='none'%3E%3Cpath d='M0 22.0001C79.5 59 85 -41.5 190 22.0001V34.0001H0V22.0001Z' fill='white'/%3E%3C/svg%3E");
-        -webkit-animation: wave 0.5s linear infinite;
-        animation: wave 0.5s linear infinite;
-        background-size: contain;
-        height: 22px;
-        left: 0;
-        position: absolute;
-        top: -22px;
-        width: 100%;
-    }
-    
-    a:hover .wave,
-    a:focus .wave,
-    a:active .wave,
-    a:hover .wave-white,
-    a:focus .wave-white,
-    a:active .wave-white {
-        top: 0;
-    }
-    
+
+
+
     @keyframes wave {
         to {
             background-position-x: 118px;
         }
     }
-    
+
     .inView.slideRight {
         opacity: 0;
         transform: translate3d(100%, 0, 0);
@@ -822,28 +836,28 @@
         transition-duration: 1s;
         transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     }
-    
+
     .inView.is_visible.slideRight {
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
-    
+
     @keyframes slideInRight {
         from {
             transform: translate3d(100%, 0, 0);
             visibility: visible;
         }
-    
+
         to {
             transform: translate3d(0, 0, 0);
             opacity: 1;
         }
     }
-    
+
     .slideInRight {
         animation-name: slideInRight;
     }
-    
+
     .circle-text {
         letter-spacing: 6px;
         font-size: 6px;
@@ -852,74 +866,74 @@
         text-transform: uppercase;
         font-weight: 300;
     }
-    
+
     #rotatingText {
         animation-name: rotate-circle;
         animation-duration: 30s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
-    
+
     @keyframes rotate-circle {
         to {
             transform: rotate(1turn);
         }
     }
-    
+
     .path-line {
         stroke-dasharray: 300;
         stroke-dashoffset: 0;
         opacity: 0;
-    
+
     }
-    
+
     .is_visible .path-line {
         animation: dash 1s linear;
         opacity: 1;
     }
-    
+
     @keyframes dash {
         from {
             stroke-dashoffset: 300;
         }
-    
+
         to {
             stroke-dashoffset: 0;
-    
+
         }
     }
-    
+
     .fadeIn {
         opacity: 0;
         transition-property: opacity;
         transition-duration: 1s;
         transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     }
-    
+
     .is_visible.fadeIn {
         opacity: 1;
     }
-    
+
     @keyframes wobb {
-    
+
         0%,
         100% {
             transform: translateY(0px)
         }
-    
+
         25% {
             transform: translateY(-3px)
         }
-    
+
         75% {
             transform: translateY(3px)
         }
     }
-    
+
     .wobble {
         overflow: visible;
     }
-    
+
     .wobble path {
         animation-name: wobb;
         animation-iteration-count: infinite;
@@ -928,7 +942,7 @@
         display: inline-block;
         transform: translateY(0px);
     }
-    
+
     .button {
         display: block;
         background: none;
@@ -937,7 +951,7 @@
         outline: none;
         position: relative;
         margin: 0;
-        padding:16.71px 66px;
+        padding: 16.71px 66px;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
         -webkit-touch-callout: none;
@@ -947,7 +961,7 @@
         -ms-user-select: none;
         user-select: none;
     }
-    
+
     .button__text {
         display: block;
         /* padding: 10px; */
@@ -967,7 +981,7 @@
         -ms-user-select: none;
         /* user-select: none; */
     }
-    
+
     .morph-shape {
         position: absolute;
         width: 100%;
@@ -975,7 +989,7 @@
         top: 0;
         left: 0;
     }
-    
+
     .button__text,
     .morph-shape svg,
     .button:hover .button__text,
@@ -983,134 +997,134 @@
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;
     }
-    
+
     .secondary .morph-shape svg {
         fill: #fff;
-    
+
     }
-    
+
     .secondary .button__text {
         color: #373737;
     }
-    
+
     .primary .morph-shape svg {
         fill: #ABCFD1;
     }
-    
+
     .primary .button__text {
         color: #373737;
     }
-    
+
     .primary-outlined .morph-shape svg {
         stroke: #fff;
         stroke-width: 2px;
         fill: transparent;
     }
-    
+
     .primary-outlined .button__text {
         color: #fff;
     }
-    
+
     .dark .morph-shape svg {
         fill: #3D8F94;
     }
-    
+
     .dark .button__text {
         color: #fff;
     }
-    
+
     .primary-transparent .morph-shape svg {
         fill: #ABCFD1;
     }
-    
+
     .primary-transparent .button__text {
         color: #373737;
     }
-    
+
     .dark-outlined .morph-shape svg {
         fill: transparent;
         stroke: #3D8F94;
         stroke-width: 2px;
     }
-    
+
     .dark-outlined .button__text {
         color: #3D8F94;
     }
-    
+
     @media(min-width:1024px) {
         .primary:hover .morph-shape svg {
             fill: #373737;
         }
-    
+
         .primary:hover .button__text {
             color: #ABCFD1;
         }
-    
+
         .primary-outlined:hover .morph-shape svg {
             fill: #fff;
         }
-    
+
         .primary-outlined:hover .button__text {
             color: #3D8F94;
         }
-    
+
         .secondary:hover .button__text {
             color: #fff;
         }
-    
+
         .secondary:hover .morph-shape svg {
             fill: #373737;
         }
-    
+
         .dark:hover .morph-shape svg {
             fill: #fff;
             stroke: #3D8F94;
             stroke-width: 2px;
         }
-    
+
         .dark:hover .button__text {
             color: #3D8F94;
         }
-    
+
         .primary-transparent:hover .morph-shape svg {
             fill: #373737;
             stroke: #ABCFD1;
         }
-    
+
         .primary-transparent:hover .button__text {
             color: #ABCFD1;
         }
-    
+
         .dark-outlined:hover .morph-shape svg {
             fill: #3D8F94;
             stroke: #3D8F94;
         }
-    
+
         .dark-outlined:hover .button__text {
             color: #fff;
         }
     }
-    
-    
+
+
     #close-menu:active {
         transform: scale(0.8);
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;
     }
-    
+
     #open-menu:active {
         transform: scale(0.8);
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;
     }
-    
+
     @supports (-webkit-touch-callout: none) {
-    
+
         /* CSS specific to iOS devices */
         .nav-top {
             padding-bottom: 32px;
         }
-    
+
         @media(min-width:768px) {
             .nav-top {
                 padding-bottom: 12px;
