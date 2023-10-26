@@ -259,7 +259,6 @@
         cursor: pointer;
         text-align: center;
         display: block;
-        width: max-content;
     }
 
     .btn.primary {
