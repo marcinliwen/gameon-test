@@ -6,6 +6,7 @@ interface Props {
   logoWhite?: boolean;
 }
 import "../styles/global.css";
+import Button from "../components/Button.astro";
 import Input from "../components/Input.astro";
 
 const { title, isHome, textdark, logoWhite } = Astro.props;
@@ -214,9 +215,8 @@ const { title, isHome, textdark, logoWhite } = Astro.props;
               </svg></button
             >
           </div>
-          <button onclick="location.href='/account/'" type="button" class="btn btn-text bg-white text-gray-800 mx-auto"
-            >Sign up</button
-          >
+          <Button  onclick="location.href = '/account'"
+          type="button" text="Sign up" type="button" color="secondary" className="!mx-auto"/>
         </form>
         <a href="/" class="flex gap-6 items-center cursor-pointer mt-16"
           ><span

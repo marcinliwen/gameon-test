@@ -4,6 +4,14 @@
 
 
 @layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+        
+      }
+      *{
+        -webkit-appearance:none;
+        -webkit-border-radius:0px;
+      }
     @font-face {
         font-family: "Work Sans";
         src: url("/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf") format("truetype-variations");
@@ -251,7 +259,7 @@
         cursor: pointer;
         text-align: center;
         display: block;
-        width: 100%;
+        width: max-content;
     }
 
     .btn.primary {
@@ -686,14 +694,20 @@
         background: #3D8F94;
     }
 
-    #password.hide~.toggle-password .open {
+    input#password[type="password"]~.toggle-password .open {
         opacity: 0;
+        visibility: hidden;
     }
 
-    #password.hide~.toggle-password .close {
-        opacity: 1;
+    input#password[type="text"]~.toggle-password .close {
+        opacity: 0;
+        visibility: hidden;
     }
 
+    .toggle-password .open , .toggle-password .close{
+        position: absolute;
+        right: 0
+    }
     #password~.toggle-password {
         position: absolute;
         right: 16px;
@@ -716,7 +730,7 @@
 .has-wave {
     overflow: hidden;
     position: relative;
-    border-color: #3D8F94 !important;
+    border: none !important;
 }
 
 .has-wave span {
@@ -948,8 +962,7 @@ a:active .wave-white {
     text-align: center;
     position: relative;
     z-index: 20;
-    margin-left: -8px;
-
+    margin: 0;
     font-family: Work Sans;
     font-size: 16px;
     font-style: normal;
