@@ -42,9 +42,9 @@ window.onload = () => {
       },
     },
     speed: 1000,
-   /*  autoplay: {
+    autoplay: {
       delay: 10000,
-    }, */
+    },
   });
 
   const reviewSwiper = new Swiper(".reviews-swiper", {
@@ -382,9 +382,9 @@ window.onload = () => {
       }, 2000);
     }, 8000);
   }
-/**
- * video with custom controls
- */
+  /**
+   * video with custom controls
+   */
   const supportsVideo = !!document.createElement("video").canPlayType;
   if (supportsVideo) {
     const customVideo = document.getElementById("custom-video");
@@ -412,7 +412,6 @@ window.onload = () => {
         }
       });
       video.addEventListener("timeupdate", () => {
-        
         progressBar.style.width = `${Math.floor(
           (video.currentTime * 100) / video.duration
         )}%`;
@@ -429,18 +428,16 @@ window.onload = () => {
   /**
    * scroll to top
    */
-  const scrollToTpp = document.getElementById('scroll-to-top');
-  if(scrollToTpp){
-    scrollToTpp.addEventListener('click',()=>{
+  const scrollToTpp = document.getElementById("scroll-to-top");
+  if (scrollToTpp) {
+    scrollToTpp.addEventListener("click", () => {
       window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth'
+        top: 0,
+        left: 0,
+        behavior: "smooth",
       });
-    })
+    });
   }
-
- 	
 };
 
 /** add 0 befor digit */

@@ -141,7 +141,7 @@ const { title, isHome, textdark, logoWhite } = Astro.props;
               type="text"
               name="email"
               placeholder="E-mail"
-              class="text-white placeholder:text-white border-white"
+              class="!text-white placeholder:!text-white !border-white"
             />
           </div>
           <div class="relative custom-input mb-12">
@@ -213,29 +213,6 @@ const { title, isHome, textdark, logoWhite } = Astro.props;
               </svg>
             </button>
           </div>
-         <!--  <button
-            onclick="location.href = '/account'"
-            type="button"
-            class="button secondary button--effect-1"
-          >
-            <span
-              class="morph-shape"
-              data-morph-active="M286,113c0,0-68.8-5-136-5c-78.2,0-137,5-137,5s5-15.802,5-50.5C18,33.999,13,12,13,12s59,5,137,5c85,0,136-5,136-5s-5,17.598-5,52C281,96.398,286,113,286,113z"
-            >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 300 125"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M286,113C286,113,217.2,113,150,113C71.8,113,13,113,13,113C13,113,13,97.19800000000001,13,62.5C13,33.999,13,12,13,12C13,12,72,12,150,12C235,12,286,12,286,12C286,12,286,29.598,286,64C286,96.398,286,113,286,113C286,113,286,113,286,113"
-                ></path>
-                <desc>Created with Snap</desc><defs></defs></svg
-              >
-            </span>
-            <span class="button__text">Login</span></button
-          > -->
           <Button  onclick="location.href = '/account'"
           type="button" text="Login" type="button" color="secondary" className="!mx-auto"/>
         </form>
