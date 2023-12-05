@@ -1,30 +1,5 @@
 window.onload = () => {
-  /**
-   * autoplay video on mobile
-   */
- 
-  var player = videojs('video', {
-    autoplay: true,
-    muted: true,
-    inactivityTimeout: 0,
-    controls: true,
-        loop: true,
-                    preload:"auto" 
-  });
-
-  player.ready(function() {
-    var promise = player.play();
   
-    if (promise !== undefined) {
-      promise.then(function() {
-        // Autoplay started!
-        console.log('video start')
-      }).catch(function(error) {
-        // Autoplay was prevented.
-        console.log(error)
-      });
-    }
-  });
   /**
    * check media query
    */
