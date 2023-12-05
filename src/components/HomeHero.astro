@@ -37,15 +37,17 @@ import Button from "./Button.astro";
               </div>
 
               <video
-                autoplay="true"
-                playsinline=""
-                loop=""
-                controlslist="nodownload"
-                poster="/assets/images/home-hero.png"
-                src={`/assets/video/home-${item}.mov`}
-                class="w-full h-full  top-0 left-0 absolute object-cover inset-0 z-10 "
+                autoplay
+                loop
+                preload="auto"
+                controls
+                class="video-js vjs-theme-fantasy absolute h-full w-full left-0 top-0"
                 muted=""
-              />
+                data-setup='{"inactivityTimeout": 0}'
+                >
+                <source src={`/assets/video/home-${item}.mov`}></source>
+                </video>
+              
             </div>
           );
         })
@@ -56,3 +58,4 @@ import Button from "./Button.astro";
     </div>
   </div>
 </section>
+

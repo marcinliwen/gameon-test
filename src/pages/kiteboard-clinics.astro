@@ -12,7 +12,7 @@ import RotationCircle from "../components/RotationCircle.astro";
 
 <Layout title="Welcome to Astro." isHome={false}>
   <section class="bg-blue-800/10 md:pt-12 h-screen relative">
-    <div class="container wrapper relative grid lg:grid-cols-2 h-full">
+    <div class="container wrapper relative grid lg:grid-cols-2 top-1/2 -translate-y-1/2 z-30 md:z-20 md:h-full md:top-0 md:translate-y-0">
       <div class="md:py-0 relative z-30">
         <div
           class="max-w-[512px] flex flex-col justify-center md:justify-end lg:justify-center h-full md:pb-[5vh] lg:pb-0"
@@ -30,24 +30,17 @@ import RotationCircle from "../components/RotationCircle.astro";
       </div>
     </div>
     <div
-      class="hero-cover absolute right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full lg:w-1/2  overflow-hidden"
+      class="absolute z-20 right-0 top-0 md:top-[48px] bottom-0 md:h-1/2 lg:h-auto w-full lg:w-1/2  overflow-hidden"
     >
-    <figure
-    id="custom-video"
-    class="relative w-full h-full object-cover md:rounded-tl-[48px]"
-  >
+   
     <video
       id="video"
-      autoplay="true"
-      playsinline=""
-      loop=""
-      controlslist="play timeline volume"
-      controls
-      poster=""
-      src={`/assets/video/home-2.mov`}
-      class="relative w-full h-full object-cover md:rounded-tl-[48px]"
-      muted=""></video>
-    <div class="hero-cover absolute inset-0 z-10"></div>
+     
+      class="video-js vjs-theme-fantasy video-hero absolute w-full h-full object-cover md:rounded-tl-[48px] "
+  >
+      <source src={`/assets/video/home-2.mov`} type="video/mp4"></source>
+    </video>
+  <!--   <div class="hero-cover absolute inset-0 z-10"></div>
     <ul
       id="video-controls"
       class="controls absolute w-full left-0 right-0 bottom-20 md:bottom-8 flex opacity-0 items-center gap-5 px-8 z-30"
@@ -80,8 +73,7 @@ import RotationCircle from "../components/RotationCircle.astro";
           ></span>
         </div>
       </li>
-    </ul>
-  </figure>
+    </ul> -->
     </div>
   </section>
   <ClassesSlider />
@@ -97,4 +89,8 @@ import RotationCircle from "../components/RotationCircle.astro";
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <link href="/assets/video-js/video-js.min.css" rel="stylesheet">
+  <link href="/assets/style/fantasy.css" rel="stylesheet">
+  <script is:inline src="/assets/video-js/video.min.js"></script>
 <script src="../js/main.js"></script>
